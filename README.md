@@ -1,1 +1,0 @@
-# EnesKarapinar.github.io
