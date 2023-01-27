@@ -1,0 +1,128 @@
+/* 1201 */
+
+:root {
+    --d-color-background: #121212;
+    --d-color-main: #24292E;
+    --d-color-text: #CED2D6;
+    --d-color-orange: #D97319;
+    --d-color-orange-o: rgba(186, 102, 20, 0.6);
+    --d-color-red: #8F0031;
+    --d-color-red-o: rgba(113, 0, 39, 0.6);
+    --d-color-purple: #027185;
+    --d-color-purple-o: rgba(2, 83, 103, 0.6);
+    --d-color-green: #006644;
+    --d-color-green-o: rgba(0, 72, 58, 0.6);
+    --d-color-hole: #1B1F23;
+    --d-color-shadow: rgba(255, 255, 255, 0.25);
+    --d-url-background: url("./../../img/darkMode/darkWall.png");
+    --d-url-hanger: url("./../../img/darkMode/askiDarkWall.png");
+}
+
+.app.dark {
+    background-image: var(--d-url-background);
+}
+
+.app.dark .background {
+    background-color: var(--d-color-background);
+    box-shadow: 0px 10px 10px var(--d-color-shadow);
+}
+
+.app.dark .main {
+    background-color: var(--d-color-main);
+}
+
+.app.dark header .logo {
+    background: var(--d-color-hole);
+    box-shadow: inset 0px 0px 10px var(--d-color-shadow);
+}
+
+.app.dark header .picture {
+    background-image: var(--d-url-hanger);
+}
+
+.app.dark header .options div {
+    background: var(--d-color-hole);
+    box-shadow: inset 0px 0px 5px var(--d-color-shadow);
+}
+
+.app.dark header .options .langs a {
+    color: var(--d-color-text);
+}
+
+.app.dark header .options .langs a:hover,
+.langs {
+    background: var(--d-color-shadow);
+}
+
+.app.dark header .options .dark-light-mode a {
+    color: var(--d-color-text);
+}
+
+.app.dark header .options .dark-light-mode a:hover,
+.dark-light-mode {
+    background-color: var(--d-color-shadow);
+}
+
+.app.dark .hood h1 {
+    color: var(--d-color-text);
+}
+
+.app.dark .content div .statement h3 {
+    color: var(--d-color-text);
+}
+
+.app.dark .content div.about {
+    background-color: var(--d-color-orange);
+}
+
+.app.dark .content div.about .statement {
+    background: var(--d-color-orange-o);
+}
+
+.app.dark .content div.projects {
+    background-color: var(--d-color-red);
+}
+
+.app.dark .content div.projects .statement {
+    background: var(--d-color-red-o);
+}
+
+.app.dark .content div.certificates {
+    background-color: var(--d-color-purple);
+}
+
+.app.dark .content div.certificates .statement {
+    background: var(--d-color-purple-o);
+}
+
+.app.dark .content div.contact {
+    background-color: var(--d-color-green);
+}
+
+.app.dark .content div.contact .statement {
+    background: var(--d-color-green-o);
+}
+
+.app.dark .social-media div {
+    background: var(--d-color-hole);
+    box-shadow: inset 0px 0px 5px var(--d-color-shadow);
+}
+
+.app.dark .social-media div a {
+    color: var(--d-color-text);
+}
+
+.app.dark .social-media .linkedin a:hover,
+.linkedin {
+    background-color: var(--d-color-shadow);
+}
+
+.app.dark .social-media .github a:hover,
+.github {
+    background-color: var(--d-color-shadow);
+}
+
+.app.dark .social-media .instagram a:hover,
+.instagram {
+    background-color: var(--d-color-shadow);
+}
