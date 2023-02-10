@@ -1,0 +1,174 @@
+/*///////////////////// 1200px /////////////////////*/
+
+@media only screen and (max-width: 1200px) {
+    /* 995 */
+    .app {
+        padding: 30px 35px;
+    }
+    .app .background {
+        width: 93vw;
+    }
+    .app .content div {
+        height: 330px;
+    }
+    .app .content div.about .picture {
+        right: -1vw;
+    }
+    .app .content div.projects .picture {
+        height: 75%;
+        bottom: 6vh;
+    }
+    .app .content div.contact .picture {
+        bottom: 1vh;
+        left: 11vw;
+    }
+    .app .fix-header .page a {
+        font-size: 27px;
+    }
+    .app .fix-header.change {
+        width: 93vw;
+        left: 35px;
+    }
+    .app .content-about {
+        padding: 80px 60px;
+    }
+    .app .content-about .personel-info .personel-info-content {
+        gap: 1vw;
+    }
+    .app .content-about .personel-info .personel-info-content .personel-data {
+        width: 160vw;
+    }
+    .app .content-about .personel-info .personel-info-content .picture {
+        height: 275px;
+    }
+    .app .content-projects {
+        padding: 80px 60px;
+    }
+    .app .content-certificates {
+        padding: 80px 60px;
+    }
+    .app .content-certificates .certificate .picture .hover {
+        font-size: 28px;
+    }
+    .app .content-contact {
+        padding: 80px 60px;
+    }
+}
+
+
+/*///////////////////// 992px /////////////////////*/
+
+@media only screen and (max-width: 992px) {
+    /* 769 */
+    .app {
+        padding: 0;
+    }
+    .app .background {
+        width: 100vw;
+        padding: 20px;
+    }
+    .app .main {
+        padding: 50px;
+    }
+    .app header .logo {
+        height: 90px;
+    }
+    .app .hood {
+        margin: 30px 0;
+    }
+    .app .hood h1 {
+        font-size: 90px;
+    }
+    .app .content div {
+        height: 310px;
+    }
+    .app .fix-header.change {
+        width: 100vw;
+        left: 0;
+        padding: 15px 20px;
+    }
+    .app .fix-header .page a {
+        font-size: 20px;
+    }
+    .app .content-about .personel-info .personel-info-content {
+        flex-direction: column;
+    }
+    .app .content-about .personel-info .personel-info-content .personel-data {
+        width: 100%;
+    }
+    .app .content-about .personel-info .personel-info-content .personel-data .personel-data-content .first-content .data-name-surname {
+        gap: 90px;
+    }
+    .app .content-about .personel-info .personel-info-content .personel-data .personel-data-content .first-content .data-experience {
+        gap: 145px;
+    }
+    .app .content-about .personel-info .personel-info-content .picture {
+        display: none;
+    }
+    .app .content-about .personel-info .personel-info-content .picture img {
+        width: 55%;
+        height: 90%;
+    }
+    .app .content-about .skills .skills-content {
+        gap: 80px;
+    }
+    .app .content-contact form .name-surname {
+        flex-direction: column;
+    }
+    .app .content-contact form .name-surname .name,
+    .app .content-contact form .name-surname .surname,
+    .app .content-contact form .btn button {
+        width: 100%;
+    }
+}
+
+
+/*///////////////////// 768px /////////////////////*/
+
+@media only screen and (max-width: 768px) {
+    /* 481 */
+    .app {
+        display: none;
+    }
+    .coming {
+        display: block;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+    }
+    .coming .picture {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -90%;
+        z-index: 1;
+    }
+    .coming .picture img {
+        height: 100%;
+    }
+    .coming h1 {
+        width: 100%;
+        height: 100%;
+        top: 15%;
+        color: transparent;
+        font-size: 120px;
+        -webkit-text-stroke: 1px white;
+        margin-bottom: 300px;
+        z-index: 99;
+        position: fixed;
+        font-size: 70px;
+        text-align: center;
+    }
+}
+
+
+/*///////////////////// 480px /////////////////////*/
+
+@media only screen and (max-width: 480px) {
+    /* 300 */
+    .coming .picture {
+        left: -180%;
+    }
+}

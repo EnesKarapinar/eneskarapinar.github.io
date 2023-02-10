@@ -6,51 +6,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdullah Enes Karapınar</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            list-style: none;
-            border: none;
-            outline: none;
-        }
-        
-        body {
-            overflow: hidden;
-            font-family: 'Fredoka One', cursive;
-        }
-        
-        .content {
-            width: 100vw;
-            height: 100vh;
-            background: url("../img/comingSoon.jpg");
-            background-size: cover;
-            background-repeat: no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .content h1 {
-            color: transparent;
-            font-size: 120px;
-            -webkit-text-stroke: 1px white;
-            margin-bottom: 300px;
-        }
-    </style>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="../icon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="./icon/favicon.ico">
 
-</head>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="./css/darkMode/style.css">
 
-<body>
-    <div class="content">
-        <h1>Coming Soon</h1>
-    </div>
-</body>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./font-awesome/css/all.min.css" />
+    <script src="./font-awesome/js/all.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="./jquery/jquery.min.js"></script>
+
+    <body>
+        <div class="app">
+            <div class="background">
+                <div class="main">
+                    <header>
+                        <div class="logo">
+                            <a href="./index.html"><img src="./img/aekLogoWhiteRectangle.png"></a>
+                        </div>
+                        <div class="picture">
+                        </div>
+                        <div class="options">
+                            <div class="langs">
+                                <a>
+                                    <span id="tr" class="tr">TR</span>
+                                    <span id="en" class="en">EN</span>
+                                </a>
+                            </div>
+                            <div class="dark-light-mode">
+                                <a>
+                                    <span class="moon"><i class="fa-regular fa-moon"></i></span>
+                                    <span class="sun"><i class="fa-regular fa-sun"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="hood">
+                        <h1 key=1>Abdullah Enes <span key=2>Karapınar</span></h1>
+                    </div>
+                    <div class="content">
+                        <div class="about">
+                            <a href="./pages/about.html">
+                                <div class="picture"><img src="./img/about.png" alt=""></div>
+                                <div class="statement">
+                                    <h3 key=4>Hakkımda</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="projects">
+                            <a href="./pages/projects.html">
+                                <div class="picture"><img src="./img/projects.png" alt=""></div>
+                                <div class="statement">
+                                    <h3 key=5>Projeler</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="certificates">
+                            <a href="./pages/certificates.html">
+                                <div class="picture"><img src="./img/certificate.png" alt=""></div>
+                                <div class="statement">
+                                    <h3 key=6>Sertifikalar</h3>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="contact">
+                            <a href="./pages/contact.html">
+                                <div class="picture"><img src="./img/contact.png" alt=""></div>
+                                <div class="statement">
+                                    <h3 key=7>İletişim</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-media">
+                        <div class="linkedin">
+                            <a href="https://www.linkedin.com/in/abdullah-enes-karap%C4%B1nar-721405242/" target="_blank">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <div class="github">
+                            <a href="https://github.com/EnesKarapinar" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://www.instagram.com/a.eneskarapinar/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="coming">
+            <div class="picture"><img src="./img/comingSoon.jpg"></div>
+            <h1>Yakında Gelecek</h1>
+        </div>
+        <script src="../js/app.js"></script>
+        <script src="../js/darkMode.js"></script>
+        <script src="../js/multilanguage.js"></script>
+    </body>
 
 </html>

@@ -1,0 +1,1192 @@
+/* 1201 */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root {
+    --color-background: #ffffff;
+    --color-main: #2570EF;
+    --color-text: #ffffff;
+    --color-innerpage-text: #2570EF;
+    --color-orange: #FF8D29;
+    --color-orange-o: rgba(225, 131, 41, 0.6);
+    --color-red: #FF4E73;
+    --color-red-o: rgba(225, 68, 115, 0.6);
+    --color-purple: #590696;
+    --color-purple-o: rgba(79, 6, 90, 0.6);
+    --color-green: #38E54D;
+    --color-green-o: rgba(56, 199, 67, 0.6);
+    --color-darkBlue: #0041B0;
+    --color-hole: #255EEF;
+    --color-skills: #2570EF;
+    --color-shadow: rgb(0 0 0 / 25%);
+    --innerpage-color-background: #F7F7F7;
+    --innerpage-color-shadow: rgba(150, 150, 150, 0.25);
+    --color-socialmedia-border: rgba(37, 112, 239, 0.25);
+    --color-projects-background: rgba(37, 102, 209, 0.6);
+    --color-innerpage-background: rgba(241, 241, 241, 0.54);
+    --scroll-background: #F7F7F7;
+    --scroll-thumb-background: rgba(37, 112, 239, 0.5);
+    --scroll-thumb-background-hover: #2570EF;
+    --dark-mode-transition: 400ms;
+    --url-background: url("./../img/whiteWall.png");
+    --url-hanger: url("./../img/hanger.png");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.app {
+    background-image: var(--url-background);
+    background-size: contain;
+    padding: 50px 55px;
+    min-height: 100vh;
+    transition: var(--dark-mode-transition);
+}
+
+.app .background {
+    background-color: var(--color-background);
+    padding: 30px;
+    box-shadow: 0px 10px 10px var(--color-shadow);
+    width: 90vw;
+    transition: var(--dark-mode-transition);
+}
+
+.app .main {
+    background-color: var(--color-main);
+    padding: 50px 100px;
+    position: relative;
+    transition: var(--dark-mode-transition);
+}
+
+
+/********************************************************************/
+
+
+/****************************** Header ******************************/
+
+
+/********************************************************************/
+
+.app header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.app header .logo {
+    height: 100px;
+    background: var(--color-hole);
+    box-shadow: inset 0px 0px 10px var(--color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+.app header .logo a {
+    transition: 400ms all;
+}
+
+.app header .logo a img {
+    height: 100%;
+}
+
+.app header .picture {
+    width: 110px;
+    height: 55px;
+    background-image: var(--url-hanger);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: var(--dark-mode-transition);
+}
+
+.app header .options {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.app header .options div {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: var(--color-hole);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+.app header .options .langs {
+    overflow: hidden;
+}
+
+.app header .options .langs a {
+    width: 100%;
+    height: 100%;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: var(--dark-mode-transition) all;
+}
+
+.app header .options .langs a:hover,
+.langs {
+    background: var(--color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+.app header .options .langs a span.tr {
+    position: absolute;
+    right: 50px;
+    transition: 400ms;
+}
+
+.app header .options .langs a span.en {
+    position: absolute;
+    right: 10px;
+    transition: 400ms;
+}
+
+.app.en header .options .langs a span.en {
+    right: -30px;
+}
+
+.app.en header .options .langs a span.tr {
+    right: 10px;
+}
+
+.app header .options .dark-light-mode {
+    overflow: hidden;
+}
+
+.app header .options .dark-light-mode a {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: var(--dark-mode-transition) all;
+}
+
+.app header .options .dark-light-mode a:hover,
+.dark-light-mode {
+    background-color: var(--color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+.app header .options .dark-light-mode a span.moon {
+    position: absolute;
+    right: 10px;
+    transition: 400ms;
+}
+
+.app header .options .dark-light-mode a span.sun {
+    position: absolute;
+    right: -30px;
+    transition: 400ms;
+}
+
+.app.dark header .options .dark-light-mode a span.moon {
+    right: 50px;
+}
+
+.app.dark header .options .dark-light-mode a span.sun {
+    right: 10px;
+}
+
+
+/************************************************************************/
+
+
+/****************************** Fix Header ******************************/
+
+
+/************************************************************************/
+
+.app .header-relative {
+    position: relative;
+}
+
+.app .fix-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.app .fix-header.change {
+    position: fixed;
+    top: 0;
+    left: 55px;
+    background-color: var(--color-background);
+    padding: 15px 30px;
+    width: 90vw;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 999;
+}
+
+.app .fix-header .page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.app .fix-header .page:nth-child(1) {
+    background-color: var(--color-darkBlue);
+    transition: var(--dark-mode-transition);
+}
+
+.app .fix-header .page:nth-child(2) {
+    background-color: var(--color-orange);
+    transition: var(--dark-mode-transition);
+}
+
+.app .fix-header .page:nth-child(3) {
+    background-color: var(--color-red);
+    transition: var(--dark-mode-transition);
+}
+
+.app .fix-header .page:nth-child(4) {
+    background-color: var(--color-purple);
+    transition: var(--dark-mode-transition);
+}
+
+.app .fix-header .page:nth-child(5) {
+    background-color: var(--color-green);
+    transition: var(--dark-mode-transition);
+}
+
+.app .fix-header .page a {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    padding: 20px;
+    width: 100%;
+    color: var(--color-text);
+    transition: var(--dark-mode-transition);
+}
+
+
+/******************************************************************/
+
+
+/****************************** Hood ******************************/
+
+
+/******************************************************************/
+
+.app .hood {
+    margin: 50px 0;
+}
+
+.app .hood h1 {
+    cursor: default;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 117px;
+    color: var(--color-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .hood h1 span {
+    display: block;
+}
+
+
+/**********************************************************************/
+
+
+/****************************** Homepage ******************************/
+
+
+/**********************************************************************/
+
+.app .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.app .content div {
+    width: 50%;
+    height: 410px;
+    position: relative;
+    overflow: hidden;
+}
+
+.app .content div a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.app .content div .picture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.app .content div .picture img {
+    height: 100%;
+}
+
+.app .content div .statement {
+    width: 100%;
+    height: auto;
+    bottom: 0;
+    position: absolute;
+    padding: 25px 20px;
+}
+
+.app .content div .statement h3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--color-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content div.about {
+    background-color: var(--color-orange);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content div.about .picture {
+    right: -2vw;
+}
+
+.app .content div.about a:hover .picture img {
+    animation: about 1000ms infinite linear;
+}
+
+.app .content div.about .statement {
+    background: var(--color-orange-o);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content div.projects {
+    background-color: var(--color-red);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content div.projects .picture {
+    height: 80%;
+    bottom: 8vh;
+    left: 2vw;
+}
+
+.app .content div.projects a:hover .picture img {
+    animation: projects 1000ms infinite linear;
+}
+
+.app .content div.projects .statement {
+    background: var(--color-red-o);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content div.certificates {
+    background-color: var(--color-purple);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content div.certificates .picture {
+    left: 1vw;
+    overflow: hidden;
+}
+
+.app .content div.certificates a:hover .picture img {
+    animation: certificates 1000ms infinite linear;
+}
+
+.app .content div.certificates .statement {
+    background: var(--color-purple-o);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content div.contact {
+    background-color: var(--color-green);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content div.contact .picture {
+    bottom: 3vh;
+    left: 12vw;
+    transform: rotate(0.94turn);
+}
+
+.app .content div.contact .picture img {
+    height: 80%;
+}
+
+.app .content div.contact a:hover .picture {
+    animation: contact 2000ms infinite linear;
+}
+
+.app .content div.contact .statement {
+    background: var(--color-green-o);
+    transition: var(--dark-mode-transition);
+}
+
+.app .social-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 200px 0 100px 0;
+}
+
+.app .social-media div {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: var(--color-hole);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    overflow: hidden;
+    transition: var(--dark-mode-transition);
+}
+
+.app .social-media div a {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: var(--color-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--dark-mode-transition) all;
+}
+
+.app .social-media .linkedin a:hover,
+.linkedin {
+    background-color: var(--color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+.app .social-media .github a:hover,
+.github {
+    background-color: var(--color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+.app .social-media .instagram a:hover,
+.instagram {
+    background-color: var(--color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+
+/*******************************************************************/
+
+
+/****************************** About ******************************/
+
+
+/*******************************************************************/
+
+.app .content-about {
+    width: 100%;
+    background: var(--color-innerpage-background);
+    border: 1px solid var(--color-background);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    margin-top: 50px;
+    padding: 100px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app .content-about .personel-info .personel-info-hood,
+.app .content-about .skills .skills-info-hood,
+.app .content-about .timeline .timeline-info-hood {
+    padding: 10px;
+    background: var(--innerpage-color-background);
+    border: 1px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    display: flex;
+    justify-content: center;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-hood h3,
+.app .content-about .skills .skills-info-hood h3,
+.app .content-about .timeline .timeline-info-hood h3 {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    color: var(--color-innerpage-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vw;
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100vw;
+    height: 100%;
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content {
+    background: var(--innerpage-color-background);
+    border: 1px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    padding: 20px 25px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content h5 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--color-innerpage-text);
+    margin-bottom: 20px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content h5 span {
+    font-weight: 400;
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content .first-content .data-name-surname {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 45px;
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content .first-content .data-experience {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content .second-content .data-social-media h5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content .second-content .data-social-media span {
+    display: flex;
+    gap: 20px;
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content .second-content .data-social-media span a {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    color: var(--color-innerpage-text);
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .personel-data-content .second-content .data-social-media span a:hover {
+    background-color: var(--innerpage-color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .download-cv a {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background: var(--innerpage-color-background);
+    border: 2px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--color-innerpage-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-content .personel-data .download-cv a:hover {
+    border: 2px solid var(--color-innerpage-text);
+    box-shadow: 0 0 0;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-content .picture {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: var(--innerpage-color-background);
+    border: 1px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .personel-info .personel-info-content .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Skills */
+
+.app .content-about .skills {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app .content-about .skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: var(--innerpage-color-background);
+    border: 1px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    padding: 50px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .skills .skills-content .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+}
+
+.app .content-about .skills .skills-content .skill span.percent-pie {
+    --v: calc( ((18/5) * var(--p) - 90)*1deg);
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    color: var(--color-innerpage-text);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    border: 1px solid var(--color-skills);
+    justify-content: center;
+    border-radius: 100%;
+    padding: 10px;
+    background: radial-gradient(var(--innerpage-color-background) 0%, var(--innerpage-color-background) 65%, var(--color-skills) 100%) content-box, linear-gradient(var(--v), var(--innerpage-color-background) 50%, transparent 0) 0/min(100%, (50 - var(--p))*100%), linear-gradient(var(--v), transparent 50%, var(--color-skills) 0) 0/min(100%, (var(--p) - 50)*100%), linear-gradient(to right, var(--innerpage-color-background) 50%, var(--color-skills) 0);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .skills .skills-content .skill h3 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--color-innerpage-text);
+    margin-top: 15px;
+    transition: var(--dark-mode-transition);
+}
+
+
+/* Timeline */
+
+.app .content-about .timeline {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.app .content-about .timeline .timeline-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    background: var(--innerpage-color-background);
+    border: 1px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    padding: 50px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-about .timeline .timeline-content h1 {
+    -webkit-text-stroke: var(--color-innerpage-text);
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    font-size: 50px;
+    transition: var(--dark-mode-transition);
+}
+
+
+/**********************************************************************/
+
+
+/****************************** Projects ******************************/
+
+
+/**********************************************************************/
+
+.app .content-projects {
+    width: 100%;
+    background: var(--color-innerpage-background);
+    border: 1px solid var(--color-background);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    margin-top: 50px;
+    /* padding: 100px 80px; */
+    padding: 200px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-projects .project {
+    width: 34vw;
+    overflow: hidden;
+    border: 2px solid var(--color-main);
+    display: flex;
+}
+
+.app .content-projects .project.active {
+    width: 100vw;
+}
+
+.app .content-projects .project.active a {
+    width: 50vw;
+}
+
+.app .content-projects .project.active .content-project {
+    width: 50vw;
+    display: block;
+}
+
+.app .content-projects .project.active .content-project .hood-project {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+.app .content-projects .project.active .content-project .hood-project span {
+    font-size: 30px;
+    color: var(--color-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-projects .project .picture {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.app .content-projects .project.inactive:hover .picture .hover {
+    left: 0;
+}
+
+.app .content-projects .project .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app .content-projects .project .picture .hover {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-projects-background);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--color-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-projects .project .content-project {
+    display: none;
+    background: var(--color-projects-background);
+    padding: 20px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-projects .project .content-project h3 {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: var(--color-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-projects .project .content-project h5 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    color: var(--color-text);
+    margin-bottom: 10px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-projects .project .content-project h5 span,
+.app .content-projects .project .content-project h5 a {
+    color: var(--color-text);
+    font-weight: 400;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-projects .project .content-project h5 span a {
+    color: var(--color-text);
+    text-decoration: underline;
+    transition: var(--dark-mode-transition);
+}
+
+
+/**************************************************************************/
+
+
+/****************************** Certificates ******************************/
+
+
+/**************************************************************************/
+
+.app .content-certificates {
+    width: 100%;
+    background: var(--color-innerpage-background);
+    border: 1px solid var(--color-background);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    margin-top: 50px;
+    padding: 100px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-certificates .certificate {
+    width: 34vw;
+    overflow: hidden;
+    border: 2px solid var(--color-main);
+    display: flex;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-certificates .certificate .picture {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.app .content-certificates .certificate:hover .picture .hover {
+    left: 0;
+}
+
+.app .content-certificates .certificate .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app .content-certificates .certificate .picture .hover {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-projects-background);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: var(--color-text);
+    text-align: center;
+    transition: var(--dark-mode-transition);
+}
+
+
+/*********************************************************************/
+
+
+/****************************** Contact ******************************/
+
+
+/*********************************************************************/
+
+.app .content-contact {
+    width: 100%;
+    background: var(--color-innerpage-background);
+    border: 1px solid var(--color-background);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    margin-top: 50px;
+    padding: 100px 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 30px;
+}
+
+.app .content-contact form input,
+.app .content-contact form textarea {
+    background: var(--innerpage-color-background);
+    border: 2px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 10px 15px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-contact form input:focus,
+.app .content-contact form textarea:focus {
+    border: 2px solid var(--color-innerpage-text);
+    box-shadow: 0 0 0;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-contact form label {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    margin-bottom: 5px;
+    color: var(--color-innerpage-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-contact form .name-surname {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 50px;
+}
+
+.app .content-contact form .name-surname .name {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app .content-contact form .name-surname .surname {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.app .content-contact form .mail {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.app .content-contact form .message {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.app .content-contact form .message textarea {
+    resize: none;
+    height: 400px;
+}
+
+.app #status,
+.app #status-en {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 38px;
+    color: var(--color-darkBlue);
+    width: 100%;
+    text-align: center;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-contact form .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app .content-contact form .btn button {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background: var(--innerpage-color-background);
+    border: 2px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    width: 50%;
+    padding: 10px 15px;
+    color: var(--color-innerpage-text);
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-contact form .btn button:hover {
+    border: 2px solid var(--color-innerpage-text);
+    box-shadow: inset 0px 0px 0px;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-contact .social-medias {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 100px 0 100px 0;
+}
+
+.app .content-contact .social-medias div {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: var(--innerpage-color-background);
+    border: 1px solid var(--color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--color-shadow);
+    overflow: hidden;
+    transition: var(--dark-mode-transition);
+}
+
+.app .content-contact .social-medias div a {
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: var(--color-innerpage-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--dark-mode-transition) all;
+}
+
+.app .content-contact .social-medias .mail-social a:hover,
+.mail-social,
+.app .content-contact .social-medias .linkedin a:hover,
+.linkedin,
+.app .content-contact .social-medias .github a:hover,
+.github,
+.app .content-contact .social-medias .instagram a:hover,
+.instagram {
+    background-color: var(--innerpage-color-shadow);
+    transition: var(--dark-mode-transition);
+}
+
+
+/****************************** Animations ******************************/
+
+@keyframes about {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes projects {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes certificates {
+    0% {
+        transform: rotate(0turn);
+    }
+    25% {
+        transform: rotate(0.01turn);
+    }
+    50% {
+        transform: rotate(0turn);
+    }
+    75% {
+        transform: rotate(-0.01turn);
+    }
+    100% {
+        transform: rotate(0turn);
+    }
+}
+
+@keyframes contact {
+    0% {
+        transform: rotate(0.94turn);
+        bottom: 3vh;
+    }
+    50% {
+        transform: rotate(0.96turn);
+        bottom: 0vh;
+    }
+    100% {
+        transform: rotate(0.94turn);
+        bottom: 3vh;
+    }
+}
+
+.coming {
+    display: none;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Enes Karapınar</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../icon/favicon.ico">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/darkMode/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../font-awesome/css/all.min.css" />
+    <script src="../font-awesome/js/all.min.js"></script>
+
+    <!-- Jquery -->
+    <script src="./jquery/jquery.min.js"></script>
+
+    <body>
+        <div class="app">
+            <div class="background">
+                <div class="main contact">
+                    <header>
+                        <div class="logo">
+                            <a href="../index.html"><img src="../img/aekLogoWhiteRectangle.png"></a>
+                        </div>
+                        <div class="picture">
+                        </div>
+                        <div class="options">
+                            <div class="langs">
+                                <a>
+                                    <span class="tr">TR</span>
+                                    <span class="en">EN</span>
+                                </a>
+                            </div>
+                            <div class="dark-light-mode">
+                                <a>
+                                    <span class="moon"><i class="fa-regular fa-moon"></i></span>
+                                    <span class="sun"><i class="fa-regular fa-sun"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </header>
+                    <div class="hood">
+                        <h1>İletişim</h1>
+                    </div>
+                </div>
+                <div class="header-relative">
+                    <div class="fix-header">
+                        <div class="page">
+                            <a href="../index.html">Ana Sayfa</a>
+                        </div>
+                        <div class="page">
+                            <a href="about.html">Hakkımda</a>
+                        </div>
+                        <div class="page">
+                            <a href="projects.html">Projeler</a>
+                        </div>
+                        <div class="page">
+                            <a href="certificates.html">Sertifikalar</a>
+                        </div>
+                        <div class="page">
+                            <a href="contact.html">İletişim</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-contact">
+                    <form id="my-form" action="https://formspree.io/f/mwkjvnkg" method="POST" enctype="multipart/form-data" autocomplete="off">
+                        <div class="name-surname">
+                            <div class="name">
+                                <label for="name">Adınız:</label>
+                                <input id="name" type="text">
+                            </div>
+                            <div class="surname">
+                                <label for="surname">Soyadınız:</label>
+                                <input id="surname" type="text">
+                            </div>
+                        </div>
+                        <div class="mail">
+                            <label for="mail">Mail Adresiniz:</label>
+                            <input id="mail" type="email" name="email">
+                        </div>
+                        <div class="message">
+                            <label for="message">Mesajınız:</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                        <p id="status"></p>
+                        <p id="status-en"></p>
+                        <div class="btn">
+                            <button type="submit">Gönder</button>
+                        </div>
+                    </form>
+
+                    <div class="social-medias">
+                        <div class="mail-social">
+                            <a href="mailto:karapinarabdullahenes@gmail.com" target="_blank">
+                                <i class="fa-regular fa-envelope"></i>
+                            </a>
+                        </div>
+                        <div class="instagram">
+                            <a href="https://www.instagram.com/a.eneskarapinar/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                        <div class="linkedin">
+                            <a href="https://www.linkedin.com/in/abdullah-enes-karap%C4%B1nar-721405242/" target="_blank">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </div>
+                        <div class="github">
+                            <a href="https://github.com/EnesKarapinar" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="../js/app.js"></script>
+        <script src="../js/darkMode.js"></script>
+        <script src="../js/multilanguage.js"></script>
+
+        <script>
+            var form = document.getElementById("my-form");
+
+            async function handleSubmit(event) {
+                console.error(event.currentTarget.className)
+                event.preventDefault();
+
+                var status = document.getElementById("status");
+                var statusEN = document.getElementById("status-en");
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        if ($("#my-form").hasClass("en")) {
+                            statusEN.innerHTML = "Your Mail Has Been Sent. I will return as soon as possible."
+                            status.innerHTML = ""
+                        } else {
+                            status.innerHTML = "Mailiniz Gönderildi. En Kısa Zamanda Dönüş Yapacağım.";
+                            statusEN.innerHTML = ""
+                        }
+                        form.reset()
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                if ($("#my-form").hasClass("en")) {
+                                    statusEN.innerHTML = "Email Address Section is not left blank!"
+                                    status.innerHTML = ""
+                                } else {
+                                    status.innerHTML = "Mail Adres Kısmı Boş Bırakılmaz!"
+                                    statusEN.innerHTML = ""
+                                }
+                            } else {
+                                if ($("#my-form").hasClass("en")) {
+                                    statusEN.innerHTML = "An Error Occurred While Submitting the Form!"
+                                    status.innerHTML = ""
+                                } else {
+                                    status.innerHTML = "Form Gönderilirken Bir Hata Oluştu!"
+                                    statusEN.innerHTML = ""
+                                }
+                            }
+                        })
+                    }
+                }).catch(error => {
+                    if ($("#my-form").hasClass("en")) {
+                        statusEN.innerHTML = "An Error Occurred While Submitting the Form!"
+                        status.innerHTML = ""
+                    } else {
+                        status.innerHTML = "Form Gönderilirken Bir Hata Oluştu!"
+                        statusEN.innerHTML = ""
+                    }
+                });
+            }
+            form.addEventListener("submit", handleSubmit)
+        </script>
+
+    </body>
+
+</html>
