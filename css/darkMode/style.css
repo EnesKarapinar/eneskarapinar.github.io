@@ -366,3 +366,13 @@
 .instagram {
     background-color: var(--d-innerpage-color-shadow);
 }
+
+.app.dark .scroll-top {
+    background: var(--d-innerpage-color-background);
+    border: 1px solid var(--d-color-socialmedia-border);
+    box-shadow: inset 0px 0px 5px var(--d-color-shadow);
+}
+
+.app.dark .scroll-top span {
+    color: var(--d-color-innerpage-text);
+}

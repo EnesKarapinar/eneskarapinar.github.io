@@ -18,3 +18,35 @@ $(".content-projects .project").click(function(event) {
     }
 
 })
+
+//Scroll Top
+$(document).ready(function() {
+    var scrollTop = $(".scroll-top");
+
+    $(window).scroll(function() {
+        var topPos = $(this).scrollTop();
+        if (topPos > 100) {
+            $(scrollTop).css("opacity", "1");
+
+        } else {
+            $(scrollTop).css("opacity", "0");
+            $(".scroll-top span").removeClass("up")
+        }
+
+    });
+    $(scrollTop).click(function() {
+        if (scrollTop != 0) {
+            $(".scroll-top span").addClass("up")
+        }
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+});
+
+//Prelaoder
+var loader = document.getElementById("preloader")
+window.addEventListener("load", function() {
+    loader.style.display = "none"
+})
