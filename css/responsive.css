@@ -316,7 +316,7 @@
         border: 1px solid #202020;
         box-shadow: inset 0px 0px 5px rgb(255 255 255 / 25%);
         border-radius: 5px;
-        padding: 10px;
+        padding: 10px 50px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
