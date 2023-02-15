@@ -8,20 +8,37 @@
     <title>Abdullah Enes Karapınar</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="./icon/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="/img/icon/favicon.ico">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="./css/darkMode/style.css">
-    <link rel="stylesheet" href="./css/preloader.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/darkMode/style.css">
+    <link rel="stylesheet" href="/css/preloader.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="./font-awesome/css/all.min.css" />
-    <script src="./font-awesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="/modals/font-awesome/css/all.min.css" />
+    <script src="/modals/font-awesome/js/all.min.js"></script>
 
     <!-- Jquery -->
-    <script src="./../jquery/jquery.min.js"></script>
+    <script src="/modals/jquery/jquery.min.js"></script>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/modals/pwa/manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="eneskarapinar.github.io">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="/modals/pwa/img/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/modals/pwa/img/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/modals/pwa/img/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/modals/pwa/img/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+    <link href="/modals/pwa/img/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/modals/pwa/img/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link href="/modals/pwa/img/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+    <link rel="apple-touch-icon" sizes="128x128" href="/modals/pwa/img/128x128.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="/modals/pwa/img/128x128.png">
+    <link rel="icon" sizes="192x192" href="/modals/pwa/img/192x192.png">
+    <link rel="icon" sizes="128x128" href="/modals/pwa/img/128x128.png">
 
     <body>
         <div id="preloader">
@@ -330,10 +347,17 @@
             </div>
         </div>
 
-        <script src="js/app.js"></script>
-        <script src="js/darkMode.js"></script>
-        <script src="js/multilanguage.js"></script>
-        <script src="js/mail.js"></script>
+        <script src="/js/app.js"></script>
+        <script src="/js/darkMode.js"></script>
+        <script src="/js/multilanguage.js"></script>
+        <script src="/js/mail.js"></script>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/modals/pwa/sw.js?v=2');
+                });
+            }
+        </script>
     </body>
 
 </html>
