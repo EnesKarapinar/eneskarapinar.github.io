@@ -1,0 +1,397 @@
+main {
+    .about {
+        min-height: 100vh;
+        padding: 200px 50px 100px 50px;
+        background-color: map-get($color, "white");
+        .personel-info {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            .hood {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                h2 {
+                    font-size: 24px;
+                    font-weight: map-get($font-weight, "b");
+                    line-height: 36px;
+                    color: map-get($color, "black");
+                    span {
+                        color: map-get($color, "orange");
+                    }
+                }
+                .underline {
+                    width: 80px;
+                    height: 2px;
+                    background-color: map-get($color, "orange");
+                }
+            }
+            .content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    h4 {
+                        font-size: 16px;
+                        font-weight: map-get($font-weight, "b");
+                        color: map-get($color, "orange");
+                        line-height: 24px;
+                        span {
+                            font-weight: map-get($font-weight, "r");
+                            color: map-get($color, "black");
+                            a {
+                                color: map-get($color, "black");
+                            }
+                        }
+                    }
+                    .top {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        .name-lastname {
+                            display: flex;
+                            gap: 180px;
+                        }
+                        .birthday-country {
+                            display: flex;
+                            gap: 200px;
+                        }
+                    }
+                    .bottom {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                    }
+                }
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .top {
+                        display: flex;
+                        gap: 30px;
+                        h4 {
+                            width: 100px;
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "b");
+                            line-height: 24px;
+                            letter-spacing: 0.15em;
+                            color: map-get($color, "black");
+                        }
+                        h5 {
+                            font-size: 40px;
+                            font-weight: map-get($font-weight, "b");
+                            color: map-get($color, "orange");
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 10px;
+                            span {
+                                font-size: 20px;
+                                font-weight: map-get($font-weight, "m");
+                                color: map-get($color, "black");
+                            }
+                        }
+                        .experience {
+                            border: 2px solid map-get($color, "orange");
+                            border-radius: 5px;
+                            padding: 10px 20px;
+                            width: 300px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                        .project {
+                            border: 2px solid map-get($color, "orange");
+                            border-radius: 5px;
+                            padding: 10px 20px;
+                            width: 300px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                    }
+                    .bottom {
+                        a {
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 100%;
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "b");
+                            line-height: 24px;
+                            letter-spacing: 0.15em;
+                            color: map-get($color, "black");
+                            border: 2px solid map-get($color, "orange");
+                            border-radius: 5px;
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+        }
+        .skills {
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+            .hood {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                h2 {
+                    font-size: 24px;
+                    font-weight: map-get($font-weight, "b");
+                    line-height: 36px;
+                    color: map-get($color, "black");
+                }
+                .underline {
+                    width: 140px;
+                    height: 2px;
+                    background-color: map-get($color, "orange");
+                }
+            }
+            .content {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 100px;
+                .skill {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 10px;
+                    .top {
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h5 {
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "m");
+                            letter-spacing: 0.15em;
+                            color: map-get($color, "black");
+                            text-align: center;
+                        }
+                        h6 {
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "m");
+                            color: map-get($color, "orange");
+                            text-align: center;
+                        }
+                    }
+                    .bottom {
+                        width: 15px;
+                        height: 200px;
+                        position: relative;
+                        .circle {
+                            width: 20px;
+                            height: 20px;
+                            background-color: map-get($color, "orange");
+                            border: 2px solid map-get($color, "white");
+                            border-radius: 50%;
+                            position: absolute;
+                            bottom: 0;
+                            right: -3px;
+                            z-index: 3;
+                        }
+                        .background {
+                            width: 100%;
+                            background-color: map-get($color, "orange");
+                            border-radius: 50px;
+                            position: absolute;
+                            bottom: 0;
+                            z-index: 2;
+                        }
+                        .border {
+                            width: 100%;
+                            height: 100%;
+                            border: 1px solid map-get($color, "orange");
+                            border-radius: 50px;
+                            position: absolute;
+                            z-index: 1;
+                        }
+                    }
+                    &.html {
+                        .bottom {
+                            .circle {
+                                @include top(90)
+                            }
+                            .background {
+                                @include yuzde(90);
+                            }
+                        }
+                    }
+                    &.css {
+                        .bottom {
+                            .circle {
+                                @include top(95)
+                            }
+                            .background {
+                                @include yuzde(95);
+                            }
+                        }
+                    }
+                    &.scss {
+                        .bottom {
+                            .circle {
+                                @include top(80)
+                            }
+                            .background {
+                                @include yuzde(80);
+                            }
+                        }
+                    }
+                    &.js {
+                        .bottom {
+                            .circle {
+                                @include top(50)
+                            }
+                            .background {
+                                @include yuzde(50);
+                            }
+                        }
+                    }
+                    &.jquery {
+                        .bottom {
+                            .circle {
+                                @include top(50)
+                            }
+                            .background {
+                                @include yuzde(50);
+                            }
+                        }
+                    }
+                    &.vue {
+                        .bottom {
+                            .circle {
+                                @include top(20)
+                            }
+                            .background {
+                                @include yuzde(20);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery(992px) {
+    // 769px
+    main {
+        .about {
+            padding: 200px 20px 100px 20px;
+            .personel-info {
+                .content {
+                    gap: 20px;
+                    .right {
+                        .top {
+                            .name-lastname {
+                                gap: 20px;
+                            }
+                            .birthday-country {
+                                gap: 40px;
+                            }
+                        }
+                    }
+                    .left {
+                        gap: 10px;
+                        .top {
+                            flex-direction: column;
+                            gap: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery(768px) {
+    // 490px
+    main {
+        .about {
+            padding: 70px 50px 50px 110px;
+            .personel-info {
+                .content {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    .left {
+                        width: 100%;
+                        .top {
+                            .experience {
+                                width: 100%;
+                            }
+                            .project {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .skills {
+                .content {
+                    row-gap: 50px;
+                    gap: 10px;
+                    .skill {
+                        .top {
+                            h5 {
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include mediaQuery(480px) {
+    // 300px
+    main {
+        .about {
+            padding: 70px 10px 70px 10px;
+            .personel-info {
+                .content {
+                    .right {
+                        h4 {
+                            font-size: 12px;
+                        }
+                    }
+                    .left {
+                        .top {
+                            h4 {
+                                font-size: 14px;
+                            }
+                        }
+                        .bottom {
+                            a {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+            .skills {
+                .content {
+                    .skill {
+                        .top {
+                            h5 {
+                                font-size: 14px;
+                            }
+                            h6 {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

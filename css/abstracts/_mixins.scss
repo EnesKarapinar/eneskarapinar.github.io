@@ -1,0 +1,22 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+}
+
+@mixin yuzde($y) {
+    height: ((200 * $y) / 100) + px;
+}
+
+@mixin top($a) {
+    bottom: (((200 * $a) / 100) - 10) + px;
+}
+
+@mixin mediaQuery($max) {
+    @media screen and (max-width: $max) {
+        @content
+    }
+}

@@ -1,0 +1,69 @@
+#loader-container {
+    background-color: map-get($color, "white");
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 9999999;
+    cursor: none;
+    #loader {
+        position: absolute;
+        height: 100px;
+        width: 100px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        #circles {
+            height: 100px;
+            width: 100px;
+            border-bottom: 3px solid map-get($color, "orange-d");
+            border-radius: 50%;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+            &:before {
+                border-top: 3px solid map-get($color, "orange");
+                height: 90px;
+                width: 90px;
+                margin: 5px;
+                border-radius: 50%;
+                display: inline-block;
+                content: "";
+                -webkit-animation: spin 4s linear infinite;
+                animation: spin 4s linear infinite;
+            }
+            &:after {
+                border-left: 3px solid map-get($color, "orange-dd");
+                height: 80px;
+                width: 80px;
+                margin: 15px 10px;
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                display: inline-block;
+                content: "";
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+            }
+        }
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

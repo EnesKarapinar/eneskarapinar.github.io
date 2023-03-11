@@ -1,0 +1,67 @@
+main {
+    .scroll-top {
+        position: fixed;
+        z-index: 99999;
+        bottom: 50px;
+        right: -60px;
+        cursor: map-get($cursor-link, "l-link"), pointer;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100%;
+        overflow: hidden;
+        background: map-get($color, "orange");
+        border: 2px solid map-get($color, "black");
+        transition: all 0.4s ease-in-out 0s;
+        opacity: 0;
+        span {
+            width: 20px;
+            display: flex;
+            svg {
+                fill: map-get($color, "black");
+            }
+        }
+        &.show {
+            opacity: 1;
+            right: 50px;
+        }
+    }
+}
+
+@include mediaQuery(992px) {
+    // 769px
+    main {
+        .scroll-top {
+            bottom: 30px;
+            right: -40px;
+            width: 40px;
+            height: 40px;
+            span {
+                width: 15px;
+            }
+            &.show {
+                right: 30px;
+            }
+        }
+    }
+}
+
+@include mediaQuery(480px) {
+    // 300px
+    main {
+        .scroll-top {
+            bottom: 60px;
+            right: -40px;
+            width: 35px;
+            height: 35px;
+            span {
+                width: 12px;
+            }
+            &.show {
+                right: 5px;
+            }
+        }
+    }
+}

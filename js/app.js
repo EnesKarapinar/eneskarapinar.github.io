@@ -1,22 +1,42 @@
-//Header
+// Nav
 $(window).scroll(function() {
-    if ($(window).scrollTop() >= 0 && $(window).scrollTop() <= 500) {
-        $(".fix-header").removeClass("change")
+    if ($(window).scrollTop() >= 100) {
+        $(".navbar").addClass("change")
     } else {
-        $(".fix-header").addClass("change")
+        $(".navbar").removeClass("change")
     }
 })
 
-//Projects
-$(".content-projects .project").click(function(event) {
-    if ($("#" + event.currentTarget.id).hasClass("active")) {
-        $("#" + event.currentTarget.id).removeClass("active")
-        $("#" + event.currentTarget.id).addClass("inactive")
-    } else {
-        $("#" + event.currentTarget.id).addClass("active")
-        $("#" + event.currentTarget.id).removeClass("inactive")
-    }
+// Switch Lang
+$(".languages").click(function() {
+    $("body").toggleClass("en")
+})
 
+//// Dark Mode
+// Control Dark Mode
+if (localStorage.getItem("dark") === "enabled") {
+    $("body").addClass("dark")
+
+} else {
+    $("body").removeClass("dark")
+}
+// Switch Dark Mode
+$(".dark-light-mode").click(function() {
+    $("body").toggleClass("dark")
+    if ($("body").hasClass("dark")) {
+        localStorage.setItem("dark", "enabled")
+    } else {
+        localStorage.setItem("dark", null)
+    }
+})
+
+// Mobile Nav Settings
+$(".mobile-nav .settings .settings-icon").click(function() {
+    if ($(".mobile-nav .settings").hasClass("active")) {
+        $(".mobile-nav .settings").removeClass("active")
+    } else {
+        $(".mobile-nav .settings").addClass("active")
+    }
 })
 
 //Scroll Top
@@ -26,18 +46,14 @@ $(document).ready(function() {
     $(window).scroll(function() {
         var topPos = $(this).scrollTop();
         if (topPos > 100) {
-            $(scrollTop).css("opacity", "1");
+            $(scrollTop).addClass("show")
 
         } else {
-            $(scrollTop).css("opacity", "0");
-            $(".scroll-top span").removeClass("up")
+            $(scrollTop).removeClass("show")
         }
 
     });
     $(scrollTop).click(function() {
-        if (scrollTop != 0) {
-            $(".scroll-top span").addClass("up")
-        }
         $('html, body').animate({
             scrollTop: 0
         }, 800);
@@ -46,7 +62,6 @@ $(document).ready(function() {
 });
 
 //Prelaoder
-var loader = document.getElementById("preloader")
-window.addEventListener("load", function() {
-    loader.style.display = "none"
-})
+$(window).on('load', function() {
+    $('#loader-container').hide();
+});

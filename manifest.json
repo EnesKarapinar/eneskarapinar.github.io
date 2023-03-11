@@ -1,39 +1,39 @@
 {
-    "name": "eneskarapinar.github.io",
+    "name": "AEK",
     "short_name": "AEK",
     "icons": [{
-            "src": "/modals/pwa/img/36x36.png",
+            "src": "img/pwa/img/36x36.png",
             "sizes": "36x36",
             "type": "image/png"
         },
         {
-            "src": "/modals/pwa/img/48x48.png",
+            "src": "img/pwa/img/48x48.png",
             "sizes": "48x48",
             "type": "image/png"
         },
         {
-            "src": "/modals/pwa/img/72x72.png",
+            "src": "img/pwa/img/72x72.png",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "/modals/pwa/img/96x96.png",
+            "src": "img/pwa/img/96x96.png",
             "sizes": "96x96",
             "type": "image/png"
         },
         {
-            "src": "/modals/pwa/img/144x144.png",
+            "src": "img/pwa/img/128x128.png",
             "sizes": "144x144",
             "type": "image/png"
         },
         {
-            "src": "/modals/pwa/img/192x192.png",
+            "src": "img/pwa/img/192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         }
     ],
-    "theme_color": "#24292E",
-    "background_color": "#24292E",
+    "theme_color": "#FFA621",
+    "background_color": "#FFA621",
     "start_url": "/",
     "display": "fullscreen",
     "orientation": "portrait"
