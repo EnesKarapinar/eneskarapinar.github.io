@@ -1,0 +1,29 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+}
+
+@mixin logo {
+    svg {
+        polygon {
+            &.logo-y {
+                fill: map-get($color, "gold");
+            }
+        }
+        path {
+            &.logo-text {
+                fill: map-get($color, "white");
+            }
+        }
+    }
+}
+
+@mixin mediaQuery($max) {
+    @media screen and (max-width: $max) {
+        @content
+    }
+}

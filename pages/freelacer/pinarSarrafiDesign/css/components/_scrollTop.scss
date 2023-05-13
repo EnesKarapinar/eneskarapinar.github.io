@@ -1,0 +1,64 @@
+.scrollTop-contactWp {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    a {
+        width: 60px;
+        height: 60px;
+        background-color: map-get($color, "green");
+        border-radius: 0px 60px 0px 0px;
+        transition: 400ms;
+        figure {
+            width: 25px;
+            height: 25px;
+            margin: 20px auto auto 10px;
+            svg {
+                width: 100%;
+                fill: map-get($color, "black");
+                transition: 400ms;
+            }
+        }
+        &:hover {
+            background-color: map-get($color, "greenHover");
+            figure {
+                svg {
+                    fill: map-get($color, "white");
+                }
+            }
+        }
+    }
+    #scrollTop {
+        width: 60px;
+        height: 60px;
+        background-color: map-get($color, "gold");
+        border-radius: 60px 0px 0px 0px;
+        cursor: pointer;
+        position: relative;
+        top: 60px;
+        left: 60px;
+        transition: 400ms;
+        figure {
+            width: 25px;
+            height: 25px;
+            margin: 20px 10px auto auto;
+            svg {
+                width: 100%;
+                fill: map-get($color, "black");
+                transition: 400ms;
+            }
+        }
+        &.show {
+            top: 0;
+            left: 0;
+        }
+        &:hover {
+            background-color: map-get($color, "goldHover");
+        }
+    }
+}

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pınar Sarrafı</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Fonts -->
+    <link href="vendors/fonts/poppins/poppins.css" rel="stylesheet">
+
+    <!-- AOS -->
+    <!-- <link rel="stylesheet" href="vendors/aos/aos.css" /> -->
+
+    <!-- Jquery -->
+    <script src="vendors/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Font Awesome -->
+    <!-- <link rel="stylesheet" href="/vendors/fontAwesome/6.4.0/all.min.css" /> -->
+    <!-- <script src="/vendors/fontAwesome/6.4.0/all.min.js"></script> -->
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="vendors/swiper/swiper.min.css" />
+    <script src="vendors/swiper/swiper.min.js"></script>
+
+</head>
+
+<body>
+
+    <section id="preloader">
+        <figure><img src="img/preloader.gif" alt="logo"></figure>
+    </section>
+
+    <main>
+
+        <nav>
+            <div class="nav">
+                <a href="index.html" class="logo">
+                    <figure><svg id="Logo" data-name="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1495.94 429.95"><polygon class="logo-y" points="340.21 330.32 80.12 30.76 105.41 0 406.11 0 430.93 30.19 317.34 168.39 304.45 153.25 405.59 30.19 396.58 19.22 114.94 19.22 105.74 30.41 340.04 300.28 359.08 277.82 163.4 47.92 343.96 47.92 280.51 125.12 267.62 109.97 302.53 67.49 205.77 67.49 384.74 277.77 340.21 330.32"/><polygon class="logo-y" points="177.89 338.08 0 128.2 67.53 46.07 80.5 61.02 25.53 128.01 177.67 307.51 234.49 238.38 247.5 253.37 177.89 338.08"/><polygon class="logo-y" points="172.75 256.23 65.67 129.91 101.97 85.74 114.99 100.74 91.18 129.73 172.6 225.77 197.31 195.56 210.31 210.53 172.75 256.23"/><polygon class="logo-y" points="366.25 225.86 353.4 210.76 419.37 133 395.52 103.99 408.19 88.58 444.84 133.16 366.25 225.86"/><polygon class="logo-y" points="397.56 262.65 384.73 247.56 486.03 128.06 430.88 60.97 443.56 45.55 511.52 128.2 397.56 262.65"/><polygon class="logo-y" points="255.76 429.95 190.71 353.2 203.33 337.84 255.76 399.7 314.45 330.47 327.42 345.41 255.76 429.95"/><polygon class="logo-y" points="256.63 355.18 222.33 314.72 234.99 299.32 256.71 324.81 282.81 294.03 295.79 308.99 256.63 355.18"/><path class="logo-text p" d="M844.08,381.88H826.5V361.79h83.27c69.26,0,69.26,96.66,0,96.87H865.84v29.71h18v19.88H827.55V488.37h16.53Zm65.69,57.32c40,0,40-57.32,0-57.32H865.84V439.2Z" transform="translate(-212.03 -325.02)"/><path class="logo-text i" d="M1077,488v20.3h-58.38V488h18V382.08H1019V361.79h57.54v20.29h-17.79V488Z" transform="translate(-212.03 -325.02)"/><path class="logo-text n" d="M1141,508.25V488.37h16.73V382.08h-17.57V361.79h33.69l86,105.24V382.08h-17.58V361.79h56.08v20.29h-16.74V508.25h-14.86l-87-105.24v85.36h17.58v19.88Z" transform="translate(-212.03 -325.02)"/><path class="logo-text a" d="M1411.08,381.67H1395.6V361.79h49.58L1500.63,488h13.6v20.3h-54.4V488h17.57c-3.76-7.53-6.48-15.27-9.41-21.55H1395.6c-2.52,6.07-6.28,13.81-9.63,21.55h17v20.3h-54.19V488h13.6Zm48.12,65.07c-7.32-17.37-14.65-35.78-26.57-63.4-12.55,28.45-21.13,46.45-28.46,63.4Z" transform="translate(-212.03 -325.02)"/><path class="logo-text r" d="M1633.9,452.59h-25.32v35.15h18.84v20.51h-58V487.74h17.16V381.88H1569V361.79h82.23c27.62,0,50.63,12.55,50.84,44.15,0,28.87-17.57,42.47-44.15,46l32.43,35.77H1708v20.51H1665.5v-18ZM1650.64,434c20.71,0,29.08-11.71,29.29-27.2,0-17.15-12.55-24.89-28.66-24.89h-42.69V434Z" transform="translate(-212.03 -325.02)"/><path class="logo-text s" d="M903.66,620.75c0,7.67-.15,13.24-.15,20.91H891.93l-.6-15.19c-7.07-4.36-16.85-6.17-25-6.17-13.24,0-26.92,5.27-26.92,17.9,0,11.73,12.48,15,27.67,17.6,21.36,3.31,42.71,8,42.71,31-.15,24.51-23.46,31.43-43.61,31.43-15.19,0-28-3.76-39.7-14.29V683h11.88l.6,14.74c7.37,5.26,18,8.27,27.37,8.27,12.93,0,30.38-3.61,30.38-19.25.15-14.44-20.15-17.3-31.13-18.95-20.16-3.16-39.1-8.27-39.1-29.93-.31-21.81,21.35-29.18,39.55-29.18C880.05,608.72,892.38,611.43,903.66,620.75Z" transform="translate(-212.03 -325.02)"/><path class="logo-text a2" d="M1065.63,716.11h-37.3v-12h13.09c-3-6.46-5.57-12.93-8.12-18.65h-54c-2.41,5.57-5.42,12-8.28,18.65h12.79v12H946.67v-12H956.9l25.87-57.3,11.12-24.06H981.71V610.83h32.49l41.21,93.24h10.22ZM1028,673.69c-6.31-14.74-12.48-29.93-21.2-50.08-9.18,20.61-16.09,35.65-22.41,50.08Z" transform="translate(-212.03 -325.02)"/><path class="logo-text r2" d="M1131.06,703.92h14.88v12.19H1105V703.92H1118V622.86h-13.08v-12h59.25c20.46,0,35.5,10.83,35.65,31.88,0,20.15-13.24,31.74-33.09,32.79l23.16,28.42h14.29v12.19H1175V705l-23-29.18h-20.9Zm32.93-39.4c15.64,0,22.56-8.57,22.71-21.36,0-12.78-9.17-20.3-22.56-20.3h-33.08v41.66Z" transform="translate(-212.03 -325.02)"/><path class="logo-text r3" d="M1273.93,703.92h14.89v12.19h-40.91V703.92h12.94V622.86h-13.09v-12H1307c20.45,0,35.49,10.83,35.64,31.88,0,20.15-13.23,31.74-33.09,32.79l23.16,28.42H1347v12.19h-29.17V705l-23-29.18h-20.91Zm32.94-39.4c15.64,0,22.56-8.57,22.71-21.36s-9.18-20.3-22.56-20.3h-33.09v41.66Z" transform="translate(-212.03 -325.02)"/><path class="logo-text a3" d="M1503.28,716.11H1466v-12h13.08c-3-6.46-5.57-12.93-8.12-18.65h-54c-2.41,5.57-5.42,12-8.28,18.65h12.79v12h-37.15v-12h10.23l25.87-57.3,11.12-24.06h-12.18V610.83h32.49l41.21,93.24h10.22Zm-37.6-42.42c-6.31-14.74-12.48-29.93-21.2-50.08-9.18,20.61-16.09,35.65-22.41,50.08Z" transform="translate(-212.03 -325.02)"/><path class="logo-text f" d="M1542.69,622.71V610.83h82.41v28h-11.73l-.45-16.24H1568.7v34.29h45.12V669H1568.7v35H1583v12h-40.45v-12h13.08V622.71Z" transform="translate(-212.03 -325.02)"/><path class="logo-text i2" d="M1668,716.11v-12h13.39V622.86h-13.09v-12h39.41v12h-13.24v81.21H1708v12Z" transform="translate(-212.03 -325.02)"/></svg></figure>
+                </a>
+                <ul>
+                    <li><a href="" class="active">Anasayfa</a></li>
+                    <li><a href="">Ürünler</a></li>
+                    <li><a href="">Hakkımızda</a></li>
+                    <li><a href="">İletişim</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="homepage-entrance">
+            <figure><img src="img/bigRing.webp" alt="Yüzük"></figure>
+            <div class="text">
+                <h2>Kalite</h2>
+                <h3>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis facere repudiandae asperiores cupiditate nam eveniet iure doloribus, assumenda autem ducimus maxime, reprehenderit quia tempore, est ipsum quidem minus accusamus odio iusto voluptatem
+                    dicta numquam cum reiciendis! Sint voluptatem enim reprehenderit, omnis magni non laudantium possimus? Enim suscipit odit nisi unde dolorem fugiat ea assumenda alias qui doloribus, perferendis inventore ratione sunt quae repellat quo
+                </h3>
+            </div>
+        </section>
+
+        <section class="picturePages">
+            <div class="picturePage">
+                <a href="">
+                    <figure><img src="img/necklace.webp" alt="Bilezik"></figure>
+                    <span>Bilezik</span>
+                </a>
+            </div>
+            <div class="picturePage">
+                <a href="">
+                    <figure><img src="img/necklace.webp" alt="Kolye"></figure>
+                    <span>Kolye</span>
+                </a>
+            </div>
+            <div class="picturePage">
+                <a href="">
+                    <figure><img src="img/rings.webp" alt="Yüzük"></figure>
+                    <span>Yüzük</span>
+                </a>
+            </div>
+            <div class="picturePage">
+                <a href="">
+                    <figure><img src="img/earring.webp" alt="Küpe"></figure>
+                    <span>Küpe</span>
+                </a>
+            </div>
+            <div class="picturePage">
+                <a href="">
+                    <figure><img src="img/watch.webp" alt="Saat"></figure>
+                    <span>Saat</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="ourLocation">
+            <div class="hood">
+                <h1>Yeni Yerimiz</h1>
+                <span></span>
+            </div>
+            <div class="content">
+                <figure></figure>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12253.476517441663!2d33.5058009!3d39.8435601!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4081dfcd21e3a18f%3A0xc1cc6f5ed6f2fce9!2zUMSxbmFyIFNhcnJhZsSx!5e0!3m2!1str!2str!4v1683960859519!5m2!1str!2str"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="homepageProducts">
+            <div class="hood">
+                <h1>Yeni Gelenler</h1>
+                <span></span>
+            </div>
+            <div class="swiper productsSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="product">
+                            <a>
+                                <div class="img">
+                                    <figure><img src="img/urunKupe.webp" alt="Küpe"></figure>
+                                    <p class="new">Yeni</p>
+                                </div>
+                                <div class="text">
+                                    <h1>Altin Kupe</h1>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination products"></div>
+            </div>
+        </section>
+
+        <!-- <section class="homepageComment">
+            <div class="hood">
+                <h1>Müşteri Yorumları</h1>
+                <span></span>
+            </div>
+            <div class="swiper commentSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">Slide 1</div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                    <div class="swiper-slide">Slide 4</div>
+                    <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                </div>
+                <div class="swiper-pagination comment"></div>
+            </div>
+        </section> -->
+
+        <footer>
+            <div class="footer">
+                <div class="top">
+                    <div class="left">
+                        <a href="index.html">
+                            <figure><svg id="Logo" data-name="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1495.94 429.95"><polygon class="logo-y" points="340.21 330.32 80.12 30.76 105.41 0 406.11 0 430.93 30.19 317.34 168.39 304.45 153.25 405.59 30.19 396.58 19.22 114.94 19.22 105.74 30.41 340.04 300.28 359.08 277.82 163.4 47.92 343.96 47.92 280.51 125.12 267.62 109.97 302.53 67.49 205.77 67.49 384.74 277.77 340.21 330.32"/><polygon class="logo-y" points="177.89 338.08 0 128.2 67.53 46.07 80.5 61.02 25.53 128.01 177.67 307.51 234.49 238.38 247.5 253.37 177.89 338.08"/><polygon class="logo-y" points="172.75 256.23 65.67 129.91 101.97 85.74 114.99 100.74 91.18 129.73 172.6 225.77 197.31 195.56 210.31 210.53 172.75 256.23"/><polygon class="logo-y" points="366.25 225.86 353.4 210.76 419.37 133 395.52 103.99 408.19 88.58 444.84 133.16 366.25 225.86"/><polygon class="logo-y" points="397.56 262.65 384.73 247.56 486.03 128.06 430.88 60.97 443.56 45.55 511.52 128.2 397.56 262.65"/><polygon class="logo-y" points="255.76 429.95 190.71 353.2 203.33 337.84 255.76 399.7 314.45 330.47 327.42 345.41 255.76 429.95"/><polygon class="logo-y" points="256.63 355.18 222.33 314.72 234.99 299.32 256.71 324.81 282.81 294.03 295.79 308.99 256.63 355.18"/><path class="logo-text p" d="M844.08,381.88H826.5V361.79h83.27c69.26,0,69.26,96.66,0,96.87H865.84v29.71h18v19.88H827.55V488.37h16.53Zm65.69,57.32c40,0,40-57.32,0-57.32H865.84V439.2Z" transform="translate(-212.03 -325.02)"/><path class="logo-text i" d="M1077,488v20.3h-58.38V488h18V382.08H1019V361.79h57.54v20.29h-17.79V488Z" transform="translate(-212.03 -325.02)"/><path class="logo-text n" d="M1141,508.25V488.37h16.73V382.08h-17.57V361.79h33.69l86,105.24V382.08h-17.58V361.79h56.08v20.29h-16.74V508.25h-14.86l-87-105.24v85.36h17.58v19.88Z" transform="translate(-212.03 -325.02)"/><path class="logo-text a" d="M1411.08,381.67H1395.6V361.79h49.58L1500.63,488h13.6v20.3h-54.4V488h17.57c-3.76-7.53-6.48-15.27-9.41-21.55H1395.6c-2.52,6.07-6.28,13.81-9.63,21.55h17v20.3h-54.19V488h13.6Zm48.12,65.07c-7.32-17.37-14.65-35.78-26.57-63.4-12.55,28.45-21.13,46.45-28.46,63.4Z" transform="translate(-212.03 -325.02)"/><path class="logo-text r" d="M1633.9,452.59h-25.32v35.15h18.84v20.51h-58V487.74h17.16V381.88H1569V361.79h82.23c27.62,0,50.63,12.55,50.84,44.15,0,28.87-17.57,42.47-44.15,46l32.43,35.77H1708v20.51H1665.5v-18ZM1650.64,434c20.71,0,29.08-11.71,29.29-27.2,0-17.15-12.55-24.89-28.66-24.89h-42.69V434Z" transform="translate(-212.03 -325.02)"/><path class="logo-text s" d="M903.66,620.75c0,7.67-.15,13.24-.15,20.91H891.93l-.6-15.19c-7.07-4.36-16.85-6.17-25-6.17-13.24,0-26.92,5.27-26.92,17.9,0,11.73,12.48,15,27.67,17.6,21.36,3.31,42.71,8,42.71,31-.15,24.51-23.46,31.43-43.61,31.43-15.19,0-28-3.76-39.7-14.29V683h11.88l.6,14.74c7.37,5.26,18,8.27,27.37,8.27,12.93,0,30.38-3.61,30.38-19.25.15-14.44-20.15-17.3-31.13-18.95-20.16-3.16-39.1-8.27-39.1-29.93-.31-21.81,21.35-29.18,39.55-29.18C880.05,608.72,892.38,611.43,903.66,620.75Z" transform="translate(-212.03 -325.02)"/><path class="logo-text a2" d="M1065.63,716.11h-37.3v-12h13.09c-3-6.46-5.57-12.93-8.12-18.65h-54c-2.41,5.57-5.42,12-8.28,18.65h12.79v12H946.67v-12H956.9l25.87-57.3,11.12-24.06H981.71V610.83h32.49l41.21,93.24h10.22ZM1028,673.69c-6.31-14.74-12.48-29.93-21.2-50.08-9.18,20.61-16.09,35.65-22.41,50.08Z" transform="translate(-212.03 -325.02)"/><path class="logo-text r2" d="M1131.06,703.92h14.88v12.19H1105V703.92H1118V622.86h-13.08v-12h59.25c20.46,0,35.5,10.83,35.65,31.88,0,20.15-13.24,31.74-33.09,32.79l23.16,28.42h14.29v12.19H1175V705l-23-29.18h-20.9Zm32.93-39.4c15.64,0,22.56-8.57,22.71-21.36,0-12.78-9.17-20.3-22.56-20.3h-33.08v41.66Z" transform="translate(-212.03 -325.02)"/><path class="logo-text r3" d="M1273.93,703.92h14.89v12.19h-40.91V703.92h12.94V622.86h-13.09v-12H1307c20.45,0,35.49,10.83,35.64,31.88,0,20.15-13.23,31.74-33.09,32.79l23.16,28.42H1347v12.19h-29.17V705l-23-29.18h-20.91Zm32.94-39.4c15.64,0,22.56-8.57,22.71-21.36s-9.18-20.3-22.56-20.3h-33.09v41.66Z" transform="translate(-212.03 -325.02)"/><path class="logo-text a3" d="M1503.28,716.11H1466v-12h13.08c-3-6.46-5.57-12.93-8.12-18.65h-54c-2.41,5.57-5.42,12-8.28,18.65h12.79v12h-37.15v-12h10.23l25.87-57.3,11.12-24.06h-12.18V610.83h32.49l41.21,93.24h10.22Zm-37.6-42.42c-6.31-14.74-12.48-29.93-21.2-50.08-9.18,20.61-16.09,35.65-22.41,50.08Z" transform="translate(-212.03 -325.02)"/><path class="logo-text f" d="M1542.69,622.71V610.83h82.41v28h-11.73l-.45-16.24H1568.7v34.29h45.12V669H1568.7v35H1583v12h-40.45v-12h13.08V622.71Z" transform="translate(-212.03 -325.02)"/><path class="logo-text i2" d="M1668,716.11v-12h13.39V622.86h-13.09v-12h39.41v12h-13.24v81.21H1708v12Z" transform="translate(-212.03 -325.02)"/></svg></figure>
+                        </a>
+                        <div class="comment">
+                            <h3>İşletmemize Yorum Yapın</h3>
+                            <a href="">Yorum Yap</a>
+                        </div>
+                    </div>
+                    <div class="pages">
+                        <h4>Pınar Sarrafı</h4>
+                        <ul>
+                            <li><a href="index.html" class="active">Anasayfa</a></li>
+                            <li>
+                                <a href="">Ürünler</a>
+                            </li>
+                            <li>
+                                <a href="">Hakkımızda</a>
+                            </li>
+                            <li>
+                                <a href="">İletişim</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contactUs_socialMedia">
+                        <div class="contactUs">
+                            <h4>Bize Ulaşın</h4>
+                            <ul>
+                                <li>
+                                    <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M16 64C16 28.7 44.7 0 80 0H304c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H80c-35.3 0-64-28.7-64-64V64zM144 448c0 8.8 7.2 16 16 16h64c8.8 0 16-7.2 16-16s-7.2-16-16-16H160c-8.8 0-16 7.2-16 16zM304 64H80V384H304V64z"/></svg></figure>
+                                    <span>0555 555 55 55</span>
+                                </li>
+                                <li>
+                                    <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></svg></figure>
+                                    <span>0555 555 55 55</span>
+                                </li>
+                                <li>
+                                    <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg></figure>
+                                    <span>Kirikkale Merkez</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="socialMedia">
+                            <a href="">
+                                <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"/></svg></figure>
+                            </a>
+                            <a href="">
+                                <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></figure>
+                            </a>
+                            <a href="">
+                                <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></figure>
+                            </a>
+                            <a href="">
+                                <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"/></svg></figure>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="copyright">
+                        <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c-31.2-31.2-31.2-81.9 0-113.1s81.9-31.2 113.1 0c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9c-50-50-131-50-181 0s-50 131 0 181s131 50 181 0c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0c-31.2 31.2-81.9 31.2-113.1 0z"/></svg></figure>
+                        <span>Tüm Hakları Saklıdır</span>
+                    </div>
+                    <div class="madeBy">
+                        <span>Made By</span>
+                        <figure>AEK</figure>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <section class="scrollTop-contactWp">
+        <a>
+            <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg></figure>
+        </a>
+        <span id="scrollTop">
+            <figure><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M201.4 137.4c12.5-12.5 32.8-12.5 45.3 0l160 160c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L224 205.3 86.6 342.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l160-160z"/></svg></figure>
+        </span>
+    </section>
+
+    <!-- Script -->
+    <script src="js/app.js"></script>
+
+    <!-- AOS -->
+    <!-- <script src="vendors/aos/aos.js"></script>
+    <script>
+        AOS.init();
+    </script> -->
+    <script>
+        var swiper = new Swiper(".productsSwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+    <!-- <script>
+        var swiper = new Swiper(".commentSwiper", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 30,
+            mousewheel: true,
+            pagination: {
+                el: ".swiper-pagination.comment",
+                clickable: true,
+            },
+        });
+    </script> -->
+
+</body>
+
+</html>

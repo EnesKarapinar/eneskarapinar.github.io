@@ -1,0 +1,45 @@
+main {
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+        background-color: map-get($color, "black");
+        border-bottom: 1px solid map-get($color, "gold");
+        padding: 15px 50px;
+        box-shadow: 0px 2px 5px map-get($color, "gold-0.25");
+        .nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .logo {
+                width: 140px;
+                figure {
+                    @include logo
+                }
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 50px;
+                li {
+                    a {
+                        font-size: 20px;
+                        font-weight: map-get($font-weight, "m");
+                        color: map-get($color, "white");
+                        transition: 400ms;
+                        &.active {
+                            color: map-get($color, "gold");
+                        }
+                        &:hover {
+                            color: map-get($color, "gold");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
