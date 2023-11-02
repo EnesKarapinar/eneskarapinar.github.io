@@ -67,7 +67,7 @@ $(window).on('load', function() {
 });
 
 // Caching Data
-const resimURLs = ['/img/ProfilePicture.webp', '/img/aekLogoBlack2.webp', '/img/aekLogoWhite2.webp'];
+const resimURLs = ['img/ProfilePicture.webp', '/img/aekLogoBlack2.webp', '/img/aekLogoWhite2.webp'];
 
 if ('caches' in window) {
     caches.open('my-cache').then((cache) => {
@@ -76,6 +76,7 @@ if ('caches' in window) {
                 if (response) {
                     // Önbellekten yükle
                     // Daha fazla işlem yapmak isterseniz burada response kullanabilirsiniz
+                    console.log("resimler onbellekten yuklendi")
                 } else {
                     // Önbellekte yoksa sunucudan al ve önbelleğe ekle
                     fetch(resimUrl).then((networkResponse) => {
