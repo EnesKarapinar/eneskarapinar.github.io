@@ -67,28 +67,28 @@ $(window).on('load', function() {
 });
 
 // Caching Data
-const resimURLs = ['img/ProfilePicture.webp', '/img/aekLogoBlack2.webp', '/img/aekLogoWhite2.webp'];
+// const resimURLs = ['img/ProfilePicture.webp', '/img/aekLogoBlack2.webp', '/img/aekLogoWhite2.webp', '/img/icon/favicon.ico', '/img/pwa/img/128x128.png', '/img/pwa/img/192x192.png'];
 
-if ('caches' in window) {
-    console.log("girdi")
-    caches.open('my-cache').then((cache) => {
-        console.log("ilerledi")
-        resimURLs.forEach((resimUrl) => {
-            console.log("foreach acti")
-            cache.match(resimUrl).then((response) => {
-                if (response) {
-                    // Önbellekten yükle
-                    // Daha fazla işlem yapmak isterseniz burada response kullanabilirsiniz
-                    console.log("resimler onbellekten yuklendi")
-                } else {
-                    // Önbellekte yoksa sunucudan al ve önbelleğe ekle
-                    fetch(resimUrl).then((networkResponse) => {
-                        cache.put(resimUrl, networkResponse.clone());
-                        // Daha fazla işlem yapmak isterseniz burada networkResponse kullanabilirsiniz
-                        console.log("sunucudan alindi")
-                    });
-                }
-            });
-        });
-    });
-}
+// if ('caches' in window) {
+// console.log("girdi")
+// caches.open('my-cache').then((cache) => {
+// console.log("ilerledi")
+// resimURLs.forEach((resimUrl) => {
+// console.log("foreach acti")
+// cache.match(resimUrl).then((response) => {
+// if (response) {
+// Önbellekten yükle
+// Daha fazla işlem yapmak isterseniz burada response kullanabilirsiniz
+// console.log("resimler onbellekten yuklendi")
+// } else {
+// Önbellekte yoksa sunucudan al ve önbelleğe ekle
+// fetch(resimUrl).then((networkResponse) => {
+// cache.put(resimUrl, networkResponse.clone());
+// Daha fazla işlem yapmak isterseniz burada networkResponse kullanabilirsiniz
+// console.log("sunucudan alindi")
+// });
+// }
+// });
+// });
+// });
+// }
