@@ -70,8 +70,11 @@ $(window).on('load', function() {
 const resimURLs = ['img/ProfilePicture.webp', '/img/aekLogoBlack2.webp', '/img/aekLogoWhite2.webp'];
 
 if ('caches' in window) {
+    console.log("girdi")
     caches.open('my-cache').then((cache) => {
+        console.log("ilerledi")
         resimURLs.forEach((resimUrl) => {
+            console.log("foreach acti")
             cache.match(resimUrl).then((response) => {
                 if (response) {
                     // Önbellekten yükle
@@ -82,6 +85,7 @@ if ('caches' in window) {
                     fetch(resimUrl).then((networkResponse) => {
                         cache.put(resimUrl, networkResponse.clone());
                         // Daha fazla işlem yapmak isterseniz burada networkResponse kullanabilirsiniz
+                        console.log("sunucudan alindi")
                     });
                 }
             });
