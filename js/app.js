@@ -65,3 +65,25 @@ $(document).ready(function() {
 $(window).on('load', function() {
     $('#loader-container').hide();
 });
+
+// Caching Data
+const resimURLs = ['/img/ProfilePicture.webp', '/img/aekLogoBlack2.webp', '/img/aekLogoWhite2.webp'];
+
+if ('caches' in window) {
+    caches.open('my-cache').then((cache) => {
+        resimURLs.forEach((resimUrl) => {
+            cache.match(resimUrl).then((response) => {
+                if (response) {
+                    // Önbellekten yükle
+                    // Daha fazla işlem yapmak isterseniz burada response kullanabilirsiniz
+                } else {
+                    // Önbellekte yoksa sunucudan al ve önbelleğe ekle
+                    fetch(resimUrl).then((networkResponse) => {
+                        cache.put(resimUrl, networkResponse.clone());
+                        // Daha fazla işlem yapmak isterseniz burada networkResponse kullanabilirsiniz
+                    });
+                }
+            });
+        });
+    });
+}
