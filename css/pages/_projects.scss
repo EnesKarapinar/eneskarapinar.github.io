@@ -53,11 +53,14 @@ main {
                 .project-box {
                     display: none;
                     width: 25vw;
+                    aspect-ratio: 3/2;
                     border-radius: 10px;
                     overflow: hidden;
                     box-shadow: 0px 0px 8px rgba(10, 15, 27, 0.25);
                     position: relative;
                     a {
+                        display: flex;
+                        height: 100%;
                         .img {
                             overflow: hidden;
                             img {
@@ -132,7 +135,7 @@ main {
                         img {
                             width: 100%;
                             height: 100%;
-                            object-fit: contain;
+                            object-fit: cover;
                         }
                     }
                     .content {
