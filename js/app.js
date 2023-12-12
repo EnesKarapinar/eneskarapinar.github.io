@@ -10,7 +10,50 @@ $(window).scroll(function() {
 // Switch Lang
 $(".languages").click(function() {
     $("body").toggleClass("en")
+    if ($("body").hasClass("en")) {
+        setLanguage("en")
+    } else {
+        setLanguage("tr")
+    }
 })
+
+// Dil dosyalarını yüklemek için fonksiyon
+function loadLanguage(lang) {
+    $.getJSON(`../js/lang/${lang}.json`, function(data) {
+        $('[data-translate]').each(function() {
+            var key = $(this).data('translate');
+            if ($(this).children().length === 0) {
+                // Eğer etiketin iç içe etiketleri yoksa
+                $(this).text(data[key] || "Missing translation");
+            } else {
+                // Eğer etiketin iç içe etiketleri varsa
+                $(this).contents().filter(function() {
+                    return this.nodeType === 3; // Düğüm tipi metin ise
+                }).each(function() {
+                    var text = $.trim($(this).text());
+                    if (text) {
+                        $(this).replaceWith(data[key] || "Missing translation");
+                    }
+                });
+            }
+        });
+    });
+}
+
+// Kullanıcının seçtiği dili ayarlamak ve saklamak için fonksiyon
+function setLanguage(lang) {
+    localStorage.setItem('language', lang);
+    $("html").attr("lang", lang)
+    $("body").attr("class", lang)
+    loadLanguage(lang);
+}
+
+// Sayfa yüklendiğinde kullanıcının daha önce seçtiği dili yüklemek için fonksiyon
+$(document).ready(function() {
+    var language = localStorage.getItem('language') || 'tr'; // Varsayılan dil
+    setLanguage(language);
+});
+
 
 //// Dark Mode
 // Control Dark Mode
