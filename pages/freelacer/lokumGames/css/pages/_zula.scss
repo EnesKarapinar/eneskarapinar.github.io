@@ -1,0 +1,263 @@
+main {
+    .game-first-section {
+        background-image: url("../../img/Zula/a12b39132552449.61ab44881cab2.jpg");
+        width: 100%;
+        height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .game-info {
+            background-color: map-get($color, "white");
+            width: 650px;
+            position: absolute;
+            top: 200px;
+            left: 100px;
+            padding: 50px;
+            border-radius: 25px;
+            box-shadow: 7px 7px 10px 0px rgb(0 0 0 / 10%);
+            .game {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                figure {
+                    width: 80px;
+                    height: 80px;
+                    overflow: hidden;
+                    border-radius: 20px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .text {
+                    color: map-get($color, "black");
+                    h1 {
+                        font-size: 21px;
+                        font-weight: map-get($font-weight, "m");
+                    }
+                    h5 {
+                        font-size: 16px;
+                        font-weight: map-get($font-weight, "r");
+                    }
+                }
+            }
+            .text {
+                color: map-get($color, "black");
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                h2 {
+                    font-family: $title-font;
+                    font-size: 50px;
+                    font-weight: map-get($font-weight, "r");
+                    margin: 50px 0 20px 0;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: map-get($font-weight, "r");
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    .screen-shots {
+        margin: 450px 100px 0 100px;
+        h3 {
+            font-size: 34px;
+            font-weight: map-get($font-weight, "b");
+            color: map-get($color, "black");
+            margin-bottom: 50px;
+        }
+        .shots {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            .shot {
+                width: 40vw;
+                box-shadow: rgba(0, 0, 0, 0.1) 7px 7px 10px;
+                border-radius: 20px;
+                overflow: hidden;
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    figure {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: 1000ms;
+                        }
+                    }
+                }
+                &:hover {
+                    a {
+                        figure {
+                            img {
+                                transform: scale(1.05);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .comments {
+        display: flex;
+        flex-direction: column;
+        margin: 100px;
+        gap: 50px;
+        .hood {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            .star {
+                background-color: map-get($color, "white");
+                padding: 20px;
+                box-shadow: rgba(0, 0, 0, 0.1) 7px 7px 10px;
+                border-radius: 20px;
+                .star-background {
+                    display: flex;
+                    background-color: map-get($color, "main");
+                    align-items: center;
+                    border-radius: 50px;
+                    padding: 2px;
+                    figure {
+                        margin: 0 10px;
+                        color: map-get($color, "white");
+                    }
+                    .point {
+                        background-color: map-get($color, "white");
+                        padding: 10px 50px;
+                        border-radius: 50px;
+                        span {
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "m");
+                            color: map-get($color, "black");
+                        }
+                    }
+                }
+            }
+            h2 {
+                font-family: $title-font;
+                font-size: 50px;
+                font-weight: map-get($font-weight, "r");
+                color: map-get($color, "black");
+            }
+        }
+        .user-comments {
+            display: flex;
+            border: 1px solid map-get($color, "black");
+            .user-comment {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                flex: 1;
+                padding: 100px 70px;
+                border-right: 1px solid map-get($color, "black");
+                color: map-get($color, "black");
+                p {
+                    font-size: 16px;
+                    font-weight: map-get($font-weight, "r");
+                    line-height: 25px;
+                }
+                h5 {
+                    font-size: 21px;
+                    font-weight: map-get($font-weight, "b");
+                }
+                &:nth-last-child(1) {
+                    border: none;
+                }
+            }
+        }
+    }
+    .unlimited-entertainment {
+        background-image: url("../../img/Zula/a12b39132552449.61ab44881cab2.jpg");
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        .filter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: map-get($color, "main");
+            opacity: 0.5;
+            z-index: 1;
+        }
+        .content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 790px;
+            text-align: center;
+            margin: 150px 0;
+            gap: 30px;
+            color: map-get($color, "black");
+            h3 {
+                font-family: $title-font;
+                font-size: 50px;
+                font-weight: map-get($font-weight, "r");
+            }
+            p {
+                font-size: 18px;
+                font-weight: map-get($font-weight, "m");
+                line-height: 30px;
+                width: 600px;
+            }
+        }
+    }
+    .play-now {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 80px 0 0 0;
+        .play {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            width: max-content;
+            background-color: map-get($color, "white");
+            padding: 35px 50px;
+            border-radius: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 7px 7px 10px;
+            h3 {
+                font-family: $title-font;
+                font-size: 50px;
+                font-weight: map-get($font-weight, "r");
+                color: map-get($color, "black");
+            }
+            .btns {
+                display: flex;
+                gap: 30px;
+                align-items: center;
+                a {
+                    figure {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

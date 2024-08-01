@@ -1,0 +1,656 @@
+main {
+    background-color: #f6f4f0;
+    .splash-page {
+        width: 100vw;
+        height: 900px;
+        overflow: hidden;
+        position: relative;
+        .splash-background {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: absolute;
+            z-index: 0;
+            top: 0;
+            right: 0;
+            figure {
+                overflow: hidden;
+                height: 900px;
+                img {
+                    object-fit: cover;
+                    width: 110%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        .splash-left {
+            position: absolute;
+            z-index: 1;
+            margin: 173px 0px 0 calc((100% - 980px) * 0);
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .text {
+                color: map-get($color, "white");
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                h1 {
+                    font-family: $title-font;
+                    font-size: 75px;
+                    font-weight: map-get($font-weight, "r");
+                }
+                p {
+                    font-size: 24px;
+                    line-height: normal;
+                }
+            }
+            .downland-links {
+                display: flex;
+                gap: 30px;
+                figure {
+                    &:nth-child(2) {
+                        img {
+                            width: 135px;
+                            height: 45px;
+                        }
+                    }
+                }
+                figure {
+                    &:nth-child(3) {
+                        padding-left: 20px;
+                        img {
+                            width: 152px;
+                            height: 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .categories {
+        display: flex;
+        position: relative;
+        z-index: 9;
+        flex-direction: column;
+        margin-top: -160px;
+        padding: 0 100px;
+        gap: 30px;
+        .games {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 50px;
+            padding: 0;
+            margin: 0;
+            a {
+                width: 100%;
+                height: 320px;
+                max-width: 700px;
+                .game {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    max-width: 700px;
+                    position: relative;
+                    .gradient {
+                        opacity: 1;
+                        position: absolute;
+                        z-index: 3;
+                        width: 100%;
+                        height: 100%;
+                        background: rgb(232, 141, 184);
+                        background: linear-gradient(0deg, rgba(232, 141, 184, 1) 0%, rgba(232, 141, 184, 0) 100%);
+                        transition: 400ms;
+                        .text {
+                            position: absolute;
+                            z-index: 4;
+                            width: 100%;
+                            height: 100%;
+                            background-color: transparent;
+                            display: flex;
+                            align-items: flex-start;
+                            flex-direction: column;
+                            justify-content: flex-end;
+                            padding-left: 40px;
+                            padding-bottom: 20px;
+                            color: map-get($color, "black");
+                            h1 {
+                                font-weight: map-get($font-weight, "b");
+                                font-size: 21px;
+                            }
+                            p {
+                                font-weight: map-get($font-weight, "m");
+                                font-size: 16px;
+                            }
+                        }
+                    }
+                    figure {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            z-index: 2;
+                            object-fit: cover;
+                            width: 100%;
+                            height: 100%;
+                            transform: scale(1);
+                            &.second-img {
+                                top: -80px;
+                                left: 0;
+                                height: 140%;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .game {
+                        .gradient {
+                            opacity: 0;
+                        }
+                        figure {
+                            img {
+                                transform: scale(1.1);
+                                transition: 1000ms;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .discover-games {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            .button {
+                width: 30%;
+                height: 90px;
+                border-radius: 15px;
+                overflow: hidden;
+                position: relative;
+                background-color: map-get($color, "main2");
+                transition: 400ms;
+                .gradient {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    background: linear-gradient(0deg, rgba(232, 141, 184, 1) 0%, rgba(232, 141, 184, 0) 100%);
+                    opacity: 1;
+                    transition: 1000ms;
+                }
+                a {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-weight: map-get($font-weight, "b");
+                    font-size: 21px;
+                    color: map-get($color, "black");
+                    position: relative;
+                    z-index: 2;
+                    transform: scale(1);
+                    transition: 1000ms;
+                }
+                &:hover {
+                    .gradient {
+                        opacity: 0;
+                    }
+                    a {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+    .fun-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 100px;
+        .title {
+            width: 700px;
+            color: map-get($color, "black");
+            text-align: center;
+            font-size: 18px;
+            h1 {
+                font-size: 20px;
+                font-weight: map-get($font-weight, "b");
+                margin-bottom: 20px;
+            }
+            h2 {
+                font-family: $title-font;
+                font-weight: map-get($font-weight, "r");
+                font-size: 50px;
+                text-align: center;
+            }
+            p {
+                margin-top: 20px;
+                line-height: 30px;
+            }
+        }
+        a {
+            font-size: 16px;
+            font-weight: map-get($font-weight, "m");
+            color: map-get($color, "white");
+            background-color: map-get($color, "main");
+            padding: 20px;
+            border-radius: 10px;
+            margin: 40px 0 60px 0;
+            border: 1px solid map-get($color, "main");
+            transition: 400ms;
+            &:hover {
+                border: 1px solid map-get($color, "black");
+                color: map-get($color, "black");
+                background-color: transparent;
+            }
+        }
+        .image-character {
+            position: relative;
+            .image {
+                width: 700px;
+                height: 350px;
+                border-radius: 20px;
+                overflow: hidden;
+                position: relative;
+                .hover {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: map-get($color, "main");
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    transition: 500ms;
+                }
+                figure {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                &:hover {
+                    .hover {
+                        opacity: 0.3;
+                    }
+                }
+            }
+            .character {
+                width: 200px;
+                position: absolute;
+                bottom: -70px;
+                left: -75px;
+                figure {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    .games {
+        margin: 100px 50px 150px 50px;
+        padding: 0 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 700px;
+            gap: 20px;
+            color: map-get($color, "black");
+            h2 {
+                font-family: $title-font;
+                font-size: 50px;
+                font-weight: map-get($font-weight, "r");
+            }
+            p {
+                font-size: 18px;
+                font-weight: map-get($font-weight, "m");
+                text-align: center;
+                line-height: 25px;
+            }
+        }
+        .four-game {
+            position: relative;
+            width: 100%;
+            .game {
+                background-color: map-get($color, "white");
+                position: absolute;
+                width: max-content;
+                padding: 30px 30px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                border-radius: 20px;
+                box-shadow: 7px 7px 10px 0px rgb(0 0 0 / 10%);
+                .hood {
+                    display: flex;
+                    align-items: center;
+                    gap: 20px;
+                    figure {
+                        width: 75px;
+                        height: 75px;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    .text {
+                        color: map-get($color, "black");
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        h1 {
+                            font-size: 21px;
+                            font-weight: map-get($font-weight, "m");
+                        }
+                        h4 {
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "r");
+                        }
+                    }
+                }
+                .text {
+                    color: map-get($color, "black");
+                    p {
+                        width: 280px;
+                        font-size: 16px;
+                        font-weight: map-get($font-weight, "r");
+                        line-height: 25px;
+                    }
+                }
+                .btns {
+                    display: flex;
+                    gap: 20px;
+                }
+                &:nth-child(1) {
+                    top: 0;
+                    left: 0;
+                }
+                &:nth-child(2) {
+                    top: 0;
+                    right: 0;
+                }
+                &:nth-child(3) {
+                    bottom: 0;
+                    left: 0;
+                }
+                &:nth-child(4) {
+                    bottom: 0;
+                    right: 0;
+                }
+                &.character {
+                    height: 350px;
+                    width: 350px;
+                    padding: 0;
+                    background-color: transparent;
+                    box-shadow: none;
+                    figure {
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+            figure {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+                &.background {
+                    height: 1000px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+    .parallaxs {
+        position: relative;
+        .parallax-1 {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            padding: 100px 0 400px 100px;
+            background-color: map-get($color, "black");
+            &::before {
+                content: "";
+                background-image: url("../../img/spaceBackground.jpg");
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                opacity: 0.6;
+            }
+            .text {
+                color: map-get($color, "white");
+                width: 800px;
+                position: relative;
+                h4 {
+                    font-size: 21px;
+                    font-weight: map-get($font-weight, "b");
+                }
+                h3 {
+                    font-family: $title-font;
+                    font-size: 50px;
+                    font-weight: map-get($font-weight, "r");
+                    margin: 10px 0 50px 0;
+                }
+                .btn {
+                    a {
+                        font-size: 16px;
+                        font-weight: map-get($font-weight, "r");
+                        color: map-get($color, "black");
+                        background-color: map-get($color, "main2");
+                        padding: 20px 30px;
+                        border-radius: 10px;
+                        transition: 400ms;
+                        &:hover {
+                            background-color: map-get($color, "white");
+                        }
+                    }
+                }
+            }
+            .character {
+                position: absolute;
+                width: 500px;
+                bottom: -250px;
+                right: 150px;
+                figure {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+        .parallax-2 {
+            background-image: url("../../img/sendCV.jpg");
+            width: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            .e-mail {
+                display: flex;
+                justify-content: flex-end;
+                padding: 200px 50px;
+                form {
+                    background-color: map-get($color, "main");
+                    padding: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    width: 450px;
+                    border-radius: 20px;
+                    h2 {
+                        font-size: 21px;
+                        font-weight: map-get($font-weight, "b");
+                        color: map-get($color, "black");
+                    }
+                    label {
+                        font-size: 16px;
+                        font-weight: map-get($font-weight, "m");
+                        color: map-get($color, "black");
+                        margin: 20px 0 10px 0;
+                    }
+                    .mail-btn {
+                        display: flex;
+                        gap: 20px;
+                        align-items: center;
+                        input {
+                            padding: 15px;
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "m");
+                            width: 100%;
+                            color: map-get($color, "black");
+                            border-radius: 10px;
+                            border: 2px solid map-get($color, "black");
+                            background-color: map-get($color, "white");
+                        }
+                        button {
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "m");
+                            height: 100%;
+                            padding: 0 20px;
+                            color: map-get($color, "black");
+                            border-radius: 10px;
+                            background-color: map-get($color, "main2");
+                            &:hover {
+                                background-color: map-get($color, "white");
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .contact {
+            background-color: map-get($color, "white");
+            width: 400px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 7px 7px 10px 0px rgb(0 0 0 / 10%);
+            position: absolute;
+            bottom: 200px;
+            left: 150px;
+            .text {
+                color: map-get($color, "black");
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                h2 {
+                    font-size: 34px;
+                    font-weight: map-get($font-weight, "m");
+                }
+                h4 {
+                    font-size: 18px;
+                    font-weight: map-get($font-weight, "r");
+                }
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                margin-top: 20px;
+                label {
+                    font-size: 16px;
+                    font-weight: map-get($font-weight, "r");
+                    margin-bottom: 15px;
+                    color: map-get($color, "black");
+                }
+                input,
+                textarea {
+                    font-family: $font;
+                    font-size: 16px;
+                    font-weight: map-get($font-weight, "r");
+                    padding: 15px;
+                    width: 100%;
+                    color: map-get($color, "black");
+                    border-radius: 10px;
+                    border: 1px solid map-get($color, "black");
+                    background-color: map-get($color, "white");
+                    &:hover {
+                        border: 2px solid map-get($color, "black");
+                    }
+                    &:focus {
+                        border: 2px solid map-get($color, "black");
+                    }
+                }
+                .name-surname {
+                    display: flex;
+                    gap: 20px;
+                    .name {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    .surname {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .mail {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .message {
+                    display: flex;
+                    flex-direction: column;
+                    textarea {
+                        resize: none;
+                        height: 150px;
+                    }
+                }
+                .btn {
+                    button {
+                        width: 100%;
+                        font-size: 16px;
+                        color: map-get($color, "white");
+                        font-weight: map-get($font-weight, "m");
+                        padding: 15px;
+                        border-radius: 10px;
+                        background-color: map-get($color, "main3");
+                        transition: 500ms;
+                        &:hover {
+                            background-color: map-get($color, "main");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

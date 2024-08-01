@@ -1,0 +1,30 @@
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    outline: none;
+}
+
+@mixin logoText {
+    font-family: $logo-font;
+    font-size: 20px;
+    letter-spacing: 2px;
+    background-color: map-get($color, "main");
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    a {
+        color: map-get($color, "white");
+        display: flex;
+        width: 100%;
+        height: 100%;
+        padding: 15px 20px;
+    }
+}
+
+@mixin mediaQuery($max) {
+    @media screen and (max-width: $max) {
+        @content
+    }
+}

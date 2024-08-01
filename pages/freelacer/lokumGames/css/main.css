@@ -1,0 +1,1669 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style-type: none;
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+pre {
+  font-family: "Roboto", sans-serif;
+}
+
+a,
+button {
+  border: none;
+  cursor: pointer;
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-track {
+  background: rgba(232, 141, 184, 0.5);
+}
+body::-webkit-scrollbar-thumb {
+  background: #fbf5f9;
+}
+
+.preloader {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  background: white;
+  text-align: center;
+}
+.preloader .preloader-container {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 44%;
+  left: 0;
+  position: relative;
+}
+.preloader .preloader-container .animated-preloader {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgb(232, 141, 184);
+  border-radius: 50em;
+}
+.preloader .preloader-container .animated-preloader::after {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50em;
+  background: #fbf5f9;
+  animation: preloader-inside-white 1s ease-in-out infinite;
+}
+.preloader .preloader-container .animated-preloader::before {
+  content: "";
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  border-radius: 50em;
+  background: rgb(232, 141, 184);
+  animation: preloader-inside-red 1s ease-in-out infinite;
+}
+@keyframes preloader-inside-white {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes preloader-inside-red {
+  0% {
+    transform: scale(0, 0);
+  }
+  30% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+.scrollTop {
+  position: fixed;
+  bottom: -50px;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms;
+}
+.scrollTop .btn {
+  background-color: rgb(232, 141, 184);
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 7px -7px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.scrollTop .btn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 40px;
+  color: #1b0a13;
+  gap: 5px;
+}
+.scrollTop .btn a figure {
+  margin-bottom: -1px;
+}
+.scrollTop.show {
+  bottom: 0px;
+}
+
+main nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+main nav .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+main nav .navbar .logo {
+  font-family: "Sigmar", cursive;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: rgb(232, 141, 184);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+main nav .navbar .logo a {
+  color: #fbf5f9;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+}
+main nav .navbar .pages {
+  display: flex;
+  align-items: center;
+  background-color: #fbf5f9;
+  border-radius: 0 0 10px 10px;
+  box-shadow: 7.07px 7.07px 10px 0px rgba(218, 57, 43, 0.1);
+}
+main nav .navbar .pages a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b0a13;
+  letter-spacing: 1px;
+  padding: 0 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 400ms;
+}
+main nav .navbar .pages a:nth-child(1) {
+  border-radius: 0 0 0 10px;
+}
+main nav .navbar .pages a:nth-last-child(1) {
+  border-radius: 0 0 10px 0;
+}
+main nav .navbar .pages a:hover {
+  background-color: rgb(232, 141, 184);
+  color: #fbf5f9;
+}
+main nav .navbar .pages a.active {
+  background-color: rgb(232, 141, 184);
+  color: #fbf5f9;
+}
+main nav .navbar .pages .dropdown {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+main nav .navbar .pages .dropdown a {
+  border-radius: 0;
+}
+main nav .navbar .pages .dropdown .down {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding-top: 7px;
+  z-index: 999;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 400ms;
+}
+main nav .navbar .pages .dropdown .down .pages {
+  width: 100%;
+  height: auto;
+  background: #fbf5f9;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+main nav .navbar .pages .dropdown .down .pages a {
+  color: #1b0a13;
+  padding: 7px 0;
+  border-radius: 0;
+}
+main nav .navbar .pages .dropdown .down .pages a:hover {
+  color: #fbf5f9;
+}
+main nav .navbar .pages .dropdown:hover .down {
+  transform: scaleY(1);
+}
+
+footer .footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 100px;
+  gap: 40px;
+}
+footer .footer .footer-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+footer .footer .footer-top .logo {
+  font-family: "Sigmar", cursive;
+  font-size: 20px;
+  letter-spacing: 2px;
+  background-color: rgb(232, 141, 184);
+  border-radius: 0 0 10px 10px;
+  overflow: hidden;
+}
+footer .footer .footer-top .logo a {
+  color: #fbf5f9;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 15px 20px;
+}
+footer .footer .footer-top h3 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+footer .footer .footer-middle {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 50px 30px;
+  border-top: 1px solid #1b0a13;
+  border-bottom: 1px solid #1b0a13;
+}
+footer .footer .footer-middle div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer .footer-middle div h4 {
+  font-size: 21px;
+  font-weight: 700;
+}
+footer .footer .footer-middle div .text {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1b0a13;
+  gap: 10px;
+}
+footer .footer .footer-middle div .text a {
+  color: #1b0a13;
+}
+footer .footer .footer-middle div.footer-contact .text pre {
+  line-height: 25px;
+}
+footer .footer .footer-middle div.footer-contact-us .text a figure img {
+  width: 100%;
+  height: 100%;
+}
+footer .footer .footer-bottom {
+  margin-bottom: 50px;
+}
+footer .footer .footer-bottom h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+main {
+  background-color: #f6f4f0;
+}
+main .splash-page {
+  width: 100vw;
+  height: 900px;
+  overflow: hidden;
+  position: relative;
+}
+main .splash-page .splash-background {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+}
+main .splash-page .splash-background figure {
+  overflow: hidden;
+  height: 900px;
+}
+main .splash-page .splash-background figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .splash-page .splash-left {
+  position: absolute;
+  z-index: 1;
+  margin: 173px 0px 0 calc((100% - 980px) * 0);
+  margin-left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+main .splash-page .splash-left .text {
+  color: #fbf5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .splash-page .splash-left .text h1 {
+  font-family: "Suez One", serif;
+  font-size: 75px;
+  font-weight: 400;
+}
+main .splash-page .splash-left .text p {
+  font-size: 24px;
+  line-height: normal;
+}
+main .splash-page .splash-left .downland-links {
+  display: flex;
+  gap: 30px;
+}
+main .splash-page .splash-left .downland-links figure:nth-child(2) img {
+  width: 135px;
+  height: 45px;
+}
+main .splash-page .splash-left .downland-links figure:nth-child(3) {
+  padding-left: 20px;
+}
+main .splash-page .splash-left .downland-links figure:nth-child(3) img {
+  width: 152px;
+  height: 45px;
+}
+main .categories {
+  display: flex;
+  position: relative;
+  z-index: 9;
+  flex-direction: column;
+  margin-top: -160px;
+  padding: 0 100px;
+  gap: 30px;
+}
+main .categories .games {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  padding: 0;
+  margin: 0;
+}
+main .categories .games a {
+  width: 100%;
+  height: 320px;
+  max-width: 700px;
+}
+main .categories .games a .game {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 700px;
+  position: relative;
+}
+main .categories .games a .game .gradient {
+  opacity: 1;
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: rgb(232, 141, 184);
+  background: linear-gradient(0deg, rgb(232, 141, 184) 0%, rgba(232, 141, 184, 0) 100%);
+  transition: 400ms;
+}
+main .categories .games a .game .gradient .text {
+  position: absolute;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 40px;
+  padding-bottom: 20px;
+  color: #1b0a13;
+}
+main .categories .games a .game .gradient .text h1 {
+  font-weight: 700;
+  font-size: 21px;
+}
+main .categories .games a .game .gradient .text p {
+  font-weight: 500;
+  font-size: 16px;
+}
+main .categories .games a .game figure {
+  width: 100%;
+  height: 100%;
+}
+main .categories .games a .game figure img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+}
+main .categories .games a .game figure img.second-img {
+  top: -80px;
+  left: 0;
+  height: 140%;
+}
+main .categories .games a:hover .game .gradient {
+  opacity: 0;
+}
+main .categories .games a:hover .game figure img {
+  transform: scale(1.1);
+  transition: 1000ms;
+}
+main .categories .discover-games {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+main .categories .discover-games .button {
+  width: 30%;
+  height: 90px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  background-color: #ffb004;
+  transition: 400ms;
+}
+main .categories .discover-games .button .gradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(0deg, rgb(232, 141, 184) 0%, rgba(232, 141, 184, 0) 100%);
+  opacity: 1;
+  transition: 1000ms;
+}
+main .categories .discover-games .button a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 21px;
+  color: #1b0a13;
+  position: relative;
+  z-index: 2;
+  transform: scale(1);
+  transition: 1000ms;
+}
+main .categories .discover-games .button:hover .gradient {
+  opacity: 0;
+}
+main .categories .discover-games .button:hover a {
+  transform: scale(1.1);
+}
+main .fun-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+}
+main .fun-section .title {
+  width: 700px;
+  color: #1b0a13;
+  text-align: center;
+  font-size: 18px;
+}
+main .fun-section .title h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+main .fun-section .title h2 {
+  font-family: "Suez One", serif;
+  font-weight: 400;
+  font-size: 50px;
+  text-align: center;
+}
+main .fun-section .title p {
+  margin-top: 20px;
+  line-height: 30px;
+}
+main .fun-section a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fbf5f9;
+  background-color: rgb(232, 141, 184);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px 0 60px 0;
+  border: 1px solid rgb(232, 141, 184);
+  transition: 400ms;
+}
+main .fun-section a:hover {
+  border: 1px solid #1b0a13;
+  color: #1b0a13;
+  background-color: transparent;
+}
+main .fun-section .image-character {
+  position: relative;
+}
+main .fun-section .image-character .image {
+  width: 700px;
+  height: 350px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+main .fun-section .image-character .image .hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(232, 141, 184);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 500ms;
+}
+main .fun-section .image-character .image figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .fun-section .image-character .image:hover .hover {
+  opacity: 0.3;
+}
+main .fun-section .image-character .character {
+  width: 200px;
+  position: absolute;
+  bottom: -70px;
+  left: -75px;
+}
+main .fun-section .image-character .character figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .games {
+  margin: 100px 50px 150px 50px;
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+main .games .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 700px;
+  gap: 20px;
+  color: #1b0a13;
+}
+main .games .title h2 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+main .games .title p {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 25px;
+}
+main .games .four-game {
+  position: relative;
+  width: 100%;
+}
+main .games .four-game .game {
+  background-color: #fbf5f9;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 30px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.1);
+}
+main .games .four-game .game .hood {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+main .games .four-game .game .hood figure {
+  width: 75px;
+  height: 75px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+main .games .four-game .game .hood figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .games .four-game .game .hood .text {
+  color: #1b0a13;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .games .four-game .game .hood .text h1 {
+  font-size: 21px;
+  font-weight: 500;
+}
+main .games .four-game .game .hood .text h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+main .games .four-game .game .text {
+  color: #1b0a13;
+}
+main .games .four-game .game .text p {
+  width: 280px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+main .games .four-game .game .btns {
+  display: flex;
+  gap: 20px;
+}
+main .games .four-game .game:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+main .games .four-game .game:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+main .games .four-game .game:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+main .games .four-game .game:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+main .games .four-game .game.character {
+  height: 350px;
+  width: 350px;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+main .games .four-game .game.character figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .games .four-game figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .games .four-game figure.background {
+  height: 1000px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .games .four-game figure.background img {
+  width: auto;
+}
+main .parallaxs {
+  position: relative;
+}
+main .parallaxs .parallax-1 {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0 400px 100px;
+  background-color: #1b0a13;
+}
+main .parallaxs .parallax-1::before {
+  content: "";
+  background-image: url("../../img/spaceBackground.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+}
+main .parallaxs .parallax-1 .text {
+  color: #fbf5f9;
+  width: 800px;
+  position: relative;
+}
+main .parallaxs .parallax-1 .text h4 {
+  font-size: 21px;
+  font-weight: 700;
+}
+main .parallaxs .parallax-1 .text h3 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 10px 0 50px 0;
+}
+main .parallaxs .parallax-1 .text .btn a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1b0a13;
+  background-color: #ffb004;
+  padding: 20px 30px;
+  border-radius: 10px;
+  transition: 400ms;
+}
+main .parallaxs .parallax-1 .text .btn a:hover {
+  background-color: #fbf5f9;
+}
+main .parallaxs .parallax-1 .character {
+  position: absolute;
+  width: 500px;
+  bottom: -250px;
+  right: 150px;
+}
+main .parallaxs .parallax-1 .character figure {
+  width: 100%;
+  height: 100%;
+}
+main .parallaxs .parallax-1 .character figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .parallaxs .parallax-2 {
+  background-image: url("../../img/sendCV.jpg");
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .parallaxs .parallax-2 .e-mail {
+  display: flex;
+  justify-content: flex-end;
+  padding: 200px 50px;
+}
+main .parallaxs .parallax-2 .e-mail form {
+  background-color: rgb(232, 141, 184);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border-radius: 20px;
+}
+main .parallaxs .parallax-2 .e-mail form h2 {
+  font-size: 21px;
+  font-weight: 700;
+  color: #1b0a13;
+}
+main .parallaxs .parallax-2 .e-mail form label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b0a13;
+  margin: 20px 0 10px 0;
+}
+main .parallaxs .parallax-2 .e-mail form .mail-btn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+main .parallaxs .parallax-2 .e-mail form .mail-btn input {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  color: #1b0a13;
+  border-radius: 10px;
+  border: 2px solid #1b0a13;
+  background-color: #fbf5f9;
+}
+main .parallaxs .parallax-2 .e-mail form .mail-btn button {
+  font-size: 16px;
+  font-weight: 500;
+  height: 100%;
+  padding: 0 20px;
+  color: #1b0a13;
+  border-radius: 10px;
+  background-color: #ffb004;
+}
+main .parallaxs .parallax-2 .e-mail form .mail-btn button:hover {
+  background-color: #fbf5f9;
+}
+main .parallaxs .contact {
+  background-color: #fbf5f9;
+  width: 400px;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  bottom: 200px;
+  left: 150px;
+}
+main .parallaxs .contact .text {
+  color: #1b0a13;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .parallaxs .contact .text h2 {
+  font-size: 34px;
+  font-weight: 500;
+}
+main .parallaxs .contact .text h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+main .parallaxs .contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+main .parallaxs .contact form label {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  color: #1b0a13;
+}
+main .parallaxs .contact form input,
+main .parallaxs .contact form textarea {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 15px;
+  width: 100%;
+  color: #1b0a13;
+  border-radius: 10px;
+  border: 1px solid #1b0a13;
+  background-color: #fbf5f9;
+}
+main .parallaxs .contact form input:hover,
+main .parallaxs .contact form textarea:hover {
+  border: 2px solid #1b0a13;
+}
+main .parallaxs .contact form input:focus,
+main .parallaxs .contact form textarea:focus {
+  border: 2px solid #1b0a13;
+}
+main .parallaxs .contact form .name-surname {
+  display: flex;
+  gap: 20px;
+}
+main .parallaxs .contact form .name-surname .name {
+  display: flex;
+  flex-direction: column;
+}
+main .parallaxs .contact form .name-surname .surname {
+  display: flex;
+  flex-direction: column;
+}
+main .parallaxs .contact form .mail {
+  display: flex;
+  flex-direction: column;
+}
+main .parallaxs .contact form .message {
+  display: flex;
+  flex-direction: column;
+}
+main .parallaxs .contact form .message textarea {
+  resize: none;
+  height: 150px;
+}
+main .parallaxs .contact form .btn button {
+  width: 100%;
+  font-size: 16px;
+  color: #fbf5f9;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgb(103, 13, 23);
+  transition: 500ms;
+}
+main .parallaxs .contact form .btn button:hover {
+  background-color: rgb(232, 141, 184);
+}
+
+main .join-our-team {
+  width: 700px;
+  padding: 150px 0 0 100px;
+  margin-bottom: 150px;
+}
+main .join-our-team .text {
+  color: #1b0a13;
+}
+main .join-our-team .text h2 {
+  font-size: 21px;
+  font-weight: 400;
+}
+main .join-our-team .text h1 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 10px 0 20px 0;
+}
+main .join-our-team .text p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1px;
+}
+main .open-positions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 100px;
+  background-color: rgb(232, 141, 184);
+  padding: 90px 100px;
+  gap: 50px;
+}
+main .open-positions h1 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+  color: #1b0a13;
+}
+main .open-positions .positions {
+  display: flex;
+  gap: 50px;
+}
+main .open-positions .positions .position a {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .open-positions .positions .position a figure {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+main .open-positions .positions .position a figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scale(1);
+  transition: 700ms;
+}
+main .open-positions .positions .position a .text {
+  color: #1b0a13;
+}
+main .open-positions .positions .position a .text h4 {
+  font-size: 21px;
+  font-weight: 700;
+}
+main .open-positions .positions .position a .text h6 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+main .open-positions .positions .position a .text p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 20px;
+  line-height: 22px;
+}
+main .open-positions .positions .position a .btn {
+  width: 100%;
+}
+main .open-positions .positions .position a .btn span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fbf5f9;
+  background-color: rgb(103, 13, 23);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 10px;
+}
+main .open-positions .positions .position a .btn span:hover {
+  background-color: #20181d;
+}
+main .open-positions .positions .position a:hover figure img {
+  transform: scale(1.05);
+}
+main .send-cv {
+  margin: 0 100px;
+  height: 500px;
+  overflow: hidden;
+  padding: 158px 0 0 100px;
+  position: relative;
+  background-color: #1b0a13;
+}
+main .send-cv::before {
+  content: "";
+  background-image: url("../../img/sendCV.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.9;
+}
+main .send-cv .text {
+  width: 100%;
+  height: 100%;
+  color: #1b0a13;
+}
+main .send-cv .text h2 {
+  font-size: 21px;
+  font-weight: 400;
+}
+main .send-cv .text h1 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 0px 0 40px 0;
+}
+main .send-cv .text .btn a {
+  background-color: #ffb004;
+  color: #1b0a13;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 17px 15px;
+  border-radius: 7px;
+}
+
+main .about-first-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 800px;
+  padding: 150px 0 0 100px;
+  color: #1b0a13;
+  margin-bottom: 100px;
+}
+main .about-first-section h3 {
+  font-size: 21px;
+  font-weight: 500;
+}
+main .about-first-section h1 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+main .about {
+  display: flex;
+  background-color: rgb(232, 141, 184);
+}
+main .about figure {
+  width: 40vw;
+  overflow: hidden;
+  position: relative;
+}
+main .about figure img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .about .text {
+  width: 60vw;
+  padding: 90px 0 70px 150px;
+}
+main .about .text p {
+  width: 500px;
+  color: #1b0a13;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  line-height: 28px;
+}
+main .who-make-us {
+  padding: 0 100px;
+}
+main .who-make-us .parallax {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  padding: 100px;
+  position: relative;
+}
+main .who-make-us .parallax::before {
+  content: "";
+  background-image: url("../../img/aboutParallax.webp");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+main .who-make-us .parallax h1 {
+  font-family: "Suez One", serif;
+  color: #1b0a13;
+  font-size: 50px;
+  font-weight: 400;
+  position: relative;
+}
+main .who-make-us .parallax .cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+main .who-make-us .parallax .cards .top {
+  display: flex;
+  gap: 50px;
+}
+main .who-make-us .parallax .cards .top .card {
+  color: #1b0a13;
+  background-color: #fbf5f9;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.1);
+}
+main .who-make-us .parallax .cards .top .card h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: rgb(232, 141, 184);
+}
+main .who-make-us .parallax .cards .top .card p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+}
+main .who-make-us .parallax .cards .bottom .card {
+  color: #1b0a13;
+  background-color: #fbf5f9;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.1);
+}
+main .who-make-us .parallax .cards .bottom .card h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: rgb(232, 141, 184);
+}
+main .who-make-us .parallax .cards .bottom .card p {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+}
+main .founders-section {
+  margin: 0 100px;
+  background-color: rgb(103, 13, 23);
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  margin-bottom: 100px;
+}
+main .founders-section h1 {
+  font-family: "Suez One", serif;
+  color: #fbf5f9;
+  font-size: 50px;
+  font-weight: 400;
+}
+main .founders-section .founders {
+  display: flex;
+  gap: 40px;
+}
+main .founders-section .founders .founder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: default;
+}
+main .founders-section .founders .founder figure {
+  width: 100%;
+  height: 300px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: rgb(232, 141, 184);
+}
+main .founders-section .founders .founder figure img {
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1000ms;
+}
+main .founders-section .founders .founder .text {
+  color: #fbf5f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5px;
+}
+main .founders-section .founders .founder .text h2 {
+  font-size: 21px;
+  font-weight: 700;
+}
+main .founders-section .founders .founder .text h5 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+}
+main .founders-section .founders .founder:hover figure img {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+main .office-section {
+  background-image: url("../../img/office.jpg");
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+main .office-section .filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(232, 141, 184);
+  opacity: 0.5;
+  z-index: 1;
+}
+main .office-section .content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 200px 100px 100px 100px;
+}
+main .office-section .content .text {
+  color: #1b0a13;
+  width: 400px;
+  z-index: 2;
+}
+main .office-section .content .text h3 {
+  font-size: 21px;
+  font-weight: 500;
+}
+main .office-section .content .text h2 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 10px 0 20px 0;
+}
+main .office-section .content .text p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25px;
+}
+main .office-section .content .card {
+  position: relative;
+  z-index: 2;
+}
+main .office-section .content .card figure {
+  position: absolute;
+  top: -80px;
+  left: 50px;
+  width: 300px;
+}
+main .office-section .content .card figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .office-section .content .card .text {
+  color: #1b0a13;
+  background-color: #fbf5f9;
+  width: 400px;
+  padding: 150px 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 20px;
+}
+main .office-section .content .card .text h4 {
+  font-size: 21px;
+  font-weight: 700;
+}
+main .office-section .content .card .text p {
+  font-size: 16px;
+  font-weight: 500;
+}
+main .office-section .content .card .text a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fbf5f9;
+  background-color: rgb(103, 13, 23);
+  width: -moz-max-content;
+  width: max-content;
+  padding: 20px 50px;
+  border-radius: 10px;
+  transition: 500ms;
+}
+main .office-section .content .card .text a:hover {
+  background-color: rgb(232, 141, 184);
+}
+
+main .game-first-section {
+  background-image: url("../../img/Zula/a12b39132552449.61ab44881cab2.jpg");
+  width: 100%;
+  height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+main .game-first-section .game-info {
+  background-color: #fbf5f9;
+  width: 650px;
+  position: absolute;
+  top: 200px;
+  left: 100px;
+  padding: 50px;
+  border-radius: 25px;
+  box-shadow: 7px 7px 10px 0px rgba(0, 0, 0, 0.1);
+}
+main .game-first-section .game-info .game {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+main .game-first-section .game-info .game figure {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+main .game-first-section .game-info .game figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .game-first-section .game-info .game .text {
+  color: #1b0a13;
+}
+main .game-first-section .game-info .game .text h1 {
+  font-size: 21px;
+  font-weight: 500;
+}
+main .game-first-section .game-info .game .text h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+main .game-first-section .game-info .text {
+  color: #1b0a13;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main .game-first-section .game-info .text h2 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+  margin: 50px 0 20px 0;
+}
+main .game-first-section .game-info .text p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+}
+main .screen-shots {
+  margin: 450px 100px 0 100px;
+}
+main .screen-shots h3 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1b0a13;
+  margin-bottom: 50px;
+}
+main .screen-shots .shots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+main .screen-shots .shots .shot {
+  width: 40vw;
+  box-shadow: rgba(0, 0, 0, 0.1) 7px 7px 10px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+main .screen-shots .shots .shot a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .screen-shots .shots .shot a figure {
+  width: 100%;
+  height: 100%;
+}
+main .screen-shots .shots .shot a figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 1000ms;
+}
+main .screen-shots .shots .shot:hover a figure img {
+  transform: scale(1.05);
+}
+main .comments {
+  display: flex;
+  flex-direction: column;
+  margin: 100px;
+  gap: 50px;
+}
+main .comments .hood {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+main .comments .hood .star {
+  background-color: #fbf5f9;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 7px 7px 10px;
+  border-radius: 20px;
+}
+main .comments .hood .star .star-background {
+  display: flex;
+  background-color: rgb(232, 141, 184);
+  align-items: center;
+  border-radius: 50px;
+  padding: 2px;
+}
+main .comments .hood .star .star-background figure {
+  margin: 0 10px;
+  color: #fbf5f9;
+}
+main .comments .hood .star .star-background .point {
+  background-color: #fbf5f9;
+  padding: 10px 50px;
+  border-radius: 50px;
+}
+main .comments .hood .star .star-background .point span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1b0a13;
+}
+main .comments .hood h2 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+  color: #1b0a13;
+}
+main .comments .user-comments {
+  display: flex;
+  border: 1px solid #1b0a13;
+}
+main .comments .user-comments .user-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  padding: 100px 70px;
+  border-right: 1px solid #1b0a13;
+  color: #1b0a13;
+}
+main .comments .user-comments .user-comment p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+}
+main .comments .user-comments .user-comment h5 {
+  font-size: 21px;
+  font-weight: 700;
+}
+main .comments .user-comments .user-comment:nth-last-child(1) {
+  border: none;
+}
+main .unlimited-entertainment {
+  background-image: url("../../img/Zula/a12b39132552449.61ab44881cab2.jpg");
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+main .unlimited-entertainment .filter {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(232, 141, 184);
+  opacity: 0.5;
+  z-index: 1;
+}
+main .unlimited-entertainment .content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 790px;
+  text-align: center;
+  margin: 150px 0;
+  gap: 30px;
+  color: #1b0a13;
+}
+main .unlimited-entertainment .content h3 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+}
+main .unlimited-entertainment .content p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  width: 600px;
+}
+main .play-now {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 80px 0 0 0;
+}
+main .play-now .play {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #fbf5f9;
+  padding: 35px 50px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 7px 7px 10px;
+}
+main .play-now .play h3 {
+  font-family: "Suez One", serif;
+  font-size: 50px;
+  font-weight: 400;
+  color: #1b0a13;
+}
+main .play-now .play .btns {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+main .play-now .play .btns a figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+main .game-first-section.zulaMobile {
+  background-image: url("../../img/Zula/zulaMobile1.jpg");
+}
+main .unlimited-entertainment.zulaMobile {
+  background-image: url("../../img/Zula/zulaMobile1.jpg");
+}
+
+main .game-first-section.poolElite {
+  background-image: url("../../img/poolElite1.jpg");
+}
+main .unlimited-entertainment.poolElite {
+  background-image: url("../../img/poolElite1.jpg");
+}/*# sourceMappingURL=main.css.map */

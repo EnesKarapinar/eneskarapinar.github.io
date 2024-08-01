@@ -1,0 +1,91 @@
+main {
+    nav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 100px;
+            .logo {
+                @include logoText;
+            }
+            .pages {
+                display: flex;
+                align-items: center;
+                background-color: map-get($color, "white");
+                border-radius: 0 0 10px 10px;
+                box-shadow: 7.07px 7.07px 10px 0px rgba(218, 57, 43, 0.1);
+                a {
+                    font-size: 16px;
+                    font-weight: map-get($font-weight, "m");
+                    color: map-get($color, "black");
+                    letter-spacing: 1px;
+                    padding: 0 30px;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: 400ms;
+                    &:nth-child(1) {
+                        border-radius: 0 0 0 10px;
+                    }
+                    &:nth-last-child(1) {
+                        border-radius: 0 0 10px 0;
+                    }
+                    &:hover {
+                        background-color: map-get($color, "main");
+                        color: map-get($color, "white");
+                    }
+                    &.active {
+                        background-color: map-get($color, "main");
+                        color: map-get($color, "white");
+                    }
+                }
+                .dropdown {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    a {
+                        border-radius: 0;
+                    }
+                    .down {
+                        position: absolute;
+                        width: 100%;
+                        height: auto;
+                        padding-top: 7px;
+                        z-index: 999;
+                        transform: scaleY(0);
+                        transform-origin: top;
+                        transition: 400ms;
+                        .pages {
+                            width: 100%;
+                            height: auto;
+                            background: map-get($color, "white");
+                            border-radius: 7px;
+                            display: flex;
+                            flex-direction: column;
+                            overflow: hidden;
+                            a {
+                                color: map-get($color, "black");
+                                padding: 7px 0;
+                                border-radius: 0;
+                                &:hover {
+                                    color: map-get($color, "white");
+                                }
+                            }
+                        }
+                    }
+                    &:hover {
+                        .down {
+                            transform: scaleY(1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

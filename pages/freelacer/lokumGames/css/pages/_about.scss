@@ -1,0 +1,290 @@
+main {
+    .about-first-section {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 800px;
+        padding: 150px 0 0 100px;
+        color: map-get($color, "black");
+        margin-bottom: 100px;
+        h3 {
+            font-size: 21px;
+            font-weight: map-get($font-weight, "m");
+        }
+        h1 {
+            font-family: $title-font;
+            font-size: 50px;
+            font-weight: map-get($font-weight, "r");
+        }
+    }
+    .about {
+        display: flex;
+        background-color: map-get($color, "main");
+        figure {
+            width: 40vw;
+            overflow: hidden;
+            position: relative;
+            img {
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+        .text {
+            width: 60vw;
+            padding: 90px 0 70px 150px;
+            p {
+                width: 500px;
+                color: map-get($color, "black");
+                font-size: 18px;
+                font-weight: map-get($font-weight, "m");
+                letter-spacing: 0.5px;
+                line-height: 28px;
+            }
+        }
+    }
+    .who-make-us {
+        padding: 0 100px;
+        .parallax {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            padding: 100px;
+            position: relative;
+            &::before {
+                content: "";
+                background-image: url("../../img/aboutParallax.webp");
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+                bottom: 0px;
+                left: 0px;
+                opacity: 0.2;
+            }
+            h1 {
+                font-family: $title-font;
+                color: map-get($color, "black");
+                font-size: 50px;
+                font-weight: map-get($font-weight, "r");
+                position: relative;
+            }
+            .cards {
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                position: relative;
+                .top {
+                    display: flex;
+                    gap: 50px;
+                    .card {
+                        color: map-get($color, "black");
+                        background-color: map-get($color, "white");
+                        padding: 30px 40px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        border-radius: 20px;
+                        box-shadow: 7px 7px 10px 0px rgb(0 0 0 / 10%);
+                        h2 {
+                            font-size: 34px;
+                            font-weight: map-get($font-weight, "b");
+                            color: map-get($color, "main");
+                        }
+                        p {
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "m");
+                            line-height: 25px;
+                        }
+                    }
+                }
+                .bottom {
+                    .card {
+                        color: map-get($color, "black");
+                        background-color: map-get($color, "white");
+                        padding: 30px 40px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        border-radius: 20px;
+                        box-shadow: 7px 7px 10px 0px rgb(0 0 0 / 10%);
+                        h2 {
+                            font-size: 34px;
+                            font-weight: map-get($font-weight, "b");
+                            color: map-get($color, "main");
+                        }
+                        p {
+                            font-size: 16px;
+                            font-weight: map-get($font-weight, "m");
+                            line-height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .founders-section {
+        margin: 0 100px;
+        background-color: map-get($color, "main3");
+        padding: 100px 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+        margin-bottom: 100px;
+        h1 {
+            font-family: $title-font;
+            color: map-get($color, "white");
+            font-size: 50px;
+            font-weight: map-get($font-weight, "r");
+        }
+        .founders {
+            display: flex;
+            gap: 40px;
+            .founder {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                cursor: default;
+                figure {
+                    width: 100%;
+                    height: 300px;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    background-color: map-get($color, "main");
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        transform: scale(1);
+                        object-fit: cover;
+                        transition: 1000ms;
+                    }
+                }
+                .text {
+                    color: map-get($color, "white");
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    gap: 5px;
+                    h2 {
+                        font-size: 21px;
+                        font-weight: map-get($font-weight, "b");
+                    }
+                    h5 {
+                        font-size: 16px;
+                        font-weight: map-get($font-weight, "m");
+                        line-height: 25px;
+                    }
+                }
+                &:hover {
+                    figure {
+                        img {
+                            transform: scale(1.05);
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .office-section {
+        background-image: url("../../img/office.jpg");
+        width: 100%;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        overflow: hidden;
+        .filter {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: map-get($color, "main");
+            opacity: 0.5;
+            z-index: 1;
+        }
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            margin: 200px 100px 100px 100px;
+            .text {
+                color: map-get($color, "black");
+                width: 400px;
+                z-index: 2;
+                h3 {
+                    font-size: 21px;
+                    font-weight: map-get($font-weight, "m");
+                }
+                h2 {
+                    font-family: $title-font;
+                    font-size: 50px;
+                    font-weight: map-get($font-weight, "r");
+                    margin: 10px 0 20px 0;
+                }
+                p {
+                    font-size: 18px;
+                    font-weight: map-get($font-weight, "m");
+                    line-height: 25px;
+                }
+            }
+            .card {
+                position: relative;
+                z-index: 2;
+                figure {
+                    position: absolute;
+                    top: -80px;
+                    left: 50px;
+                    width: 300px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .text {
+                    color: map-get($color, "black");
+                    background-color: map-get($color, "white");
+                    width: 400px;
+                    padding: 150px 50px 50px 50px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    border-radius: 20px;
+                    h4 {
+                        font-size: 21px;
+                        font-weight: map-get($font-weight, "b");
+                    }
+                    p {
+                        font-size: 16px;
+                        font-weight: map-get($font-weight, "m");
+                    }
+                    a {
+                        font-size: 16px;
+                        font-weight: map-get($font-weight, "m");
+                        color: map-get($color, "white");
+                        background-color: map-get($color, "main3");
+                        width: max-content;
+                        padding: 20px 50px;
+                        border-radius: 10px;
+                        transition: 500ms;
+                        &:hover {
+                            background-color: map-get($color, "main");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+sayfalarin stil dosyalari buraya eklenecek
