@@ -1,0 +1,80 @@
+.header-second-div a {
+    font-size: 10px;
+}
+
+.header-bottom {
+    padding: 5px 0;
+}
+
+.header-bottom a {
+    font-size: 8px;
+    padding: 7px;
+}
+
+.first-div-txt {
+    padding-top: 5px;
+}
+
+.first-div-txt-inner h1 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+.first-div-txt-inner h6 {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.first-div-txt-inner-btn {
+    margin-bottom: 8px;
+}
+
+.first-div-txt-inner-btn a {
+    padding: 5px;
+    font-size: 10px;
+}
+
+.companies {
+    margin-top: 0px;
+    gap: 11px;
+}
+
+.companies h6 {
+    font-size: 7px;
+}
+
+.thirt-question-more-btn {
+    font-size: 14px;
+    padding: 5px 15px;
+}
+
+.fourth-question-links div a {
+    font-size: 10px;
+}
+
+.footer-top-imgs div h3 {
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+
+.footer-top-imgs h2 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+
+.footer-top-imgs p {
+    font-size: 10px;
+    line-height: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-top-imgs a {
+    padding: 5px 10px;
+    font-size: 10px;
+}
+
+.footer-hr {
+    width: 280px;
+}
