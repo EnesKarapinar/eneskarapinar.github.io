@@ -58,5 +58,7 @@
     "skills": "Yetenekler",
     "intern": "Staj",
     "santasmak-desc": "Staj projesi olarak verilen bir sitedir. Tasarımını yapıp daha sonra front-end kodlamasını yaptım.",
+    "clone": "Klon",
+    "wpClone-desc": "Eğitim aldığım zamanlarda ödev olarak verilen WhatsApp Klonu.",
     "": ""
 }
