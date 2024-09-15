@@ -59,7 +59,7 @@ main {
                     box-shadow: 0px 0px 8px rgba(10, 15, 27, 0.25);
                     position: relative;
                     a {
-                        display: flex;
+                        display: grid;
                         height: 100%;
                         .img {
                             overflow: hidden;
@@ -131,7 +131,8 @@ main {
                     .img {
                         overflow: hidden;
                         border-radius: 10px;
-                        border: 1px solid rgba(10, 15, 27, 0.2);
+                        aspect-ratio: 16/9;
+                        // border: 1px solid rgba(10, 15, 27, 0.2);
                         img {
                             width: 100%;
                             height: 100%;

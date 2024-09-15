@@ -1071,7 +1071,7 @@ main .projects-s .projects-modals .projects .project-box {
   position: relative;
 }
 main .projects-s .projects-modals .projects .project-box a {
-  display: flex;
+  display: grid;
   height: 100%;
 }
 main .projects-s .projects-modals .projects .project-box a .img {
@@ -1143,7 +1143,7 @@ main .projects-s .projects-modals .modals .modal {
 main .projects-s .projects-modals .modals .modal .img {
   overflow: hidden;
   border-radius: 10px;
-  border: 1px solid rgba(10, 15, 27, 0.2);
+  aspect-ratio: 16/9;
 }
 main .projects-s .projects-modals .modals .modal .img img {
   width: 100%;
