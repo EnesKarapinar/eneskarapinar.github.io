@@ -1,1 +1,0 @@
-tema varsa buraya eklenecek
